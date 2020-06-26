@@ -1,0 +1,15 @@
+<div [ngClass]="{'active':active === true}" 
+    class="container"
+    (click)="OnClick()">
+    <header>Mono Therapy</header>
+
+    <div *ngIf="open === true" class="cardback">
+
+        <h6>Lifestyle Management</h6>
+        <h6>Metformin</h6>
+        <div class="division">~~~~</div>
+
+        <p>Initiate metformin therapy if no contradictions</p>
+        
+    </div>
+</div>

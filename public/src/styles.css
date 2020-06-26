@@ -1,1 +1,84 @@
 /* You can add global styles to this file, and also import other style files */
+
+.slidecontainer {
+    padding-left: 10%;
+    padding-right: 10%;
+    display: block;
+    width: 100%;
+}
+
+.extra {
+    text-align: center;
+}
+
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 15px; /* Specified height */
+    background: #ffffff; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
+  
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 15px; /* Set a specific slider handle width */
+    height: 30px; /* Slider handle height */
+    background: gray; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 10px;
+}
+  
+.slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+
+/* ------------------------------*/
+
+
+
+h6, p {
+    text-align: center;
+    text-underline-offset: 2px;
+}
+
+header {
+    background-color: grey;
+    border: 1 px solid black;
+    text-align: center;
+}
+
+.division {
+    font-size: 12px;
+    margin: 5px;
+    text-align: center;
+}
+
+.cardback {
+    margin-top: 5px;
+    background-color: lightgray;
+    padding: 5px;
+}
+
+.active header {
+    background-color: orange;
+}
+
+.active .cardback {
+    background-color: rgb(255, 255, 255);
+    outline: 1px solid orange;
+}

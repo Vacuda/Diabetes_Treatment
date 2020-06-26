@@ -1,13 +1,26 @@
 
 <div class="container">
 
-    <h1>Diabetes Treatment App!</h1>
+    <h5>~~~~~~~~~~~</h5>
+    <h3>Enter A1C %</h3>
+    <h5>~~~~~~~~~~~</h5>
 
-    <!-- <div class="division"></div>
+    <input name="a1c" [(ngModel)]="a1c" class="form-control extra" placeholder="---">
 
-    <app-show *ngIf="onetask" [taskToShow]="onetask"></app-show> -->
+    <div class="slidecontainer">
+        <input name="a1c" [(ngModel)]="a1c" 
+        type="range" min="5" max="12" value="50" class="slider" step="0.1">
+    </div>
 
-    <router-outlet></router-outlet>
+    <h3>{{a1c}}%</h3>
+
+    <app-mono [a1c]="a1c"></app-mono>
+    <app-dual [a1c]="a1c"></app-dual>
+    <app-triple [a1c]="a1c"></app-triple>
+    <app-combo [a1c]="a1c"></app-combo>
+
+
+    <!-- <router-outlet></router-outlet> -->
 
 </div>
 

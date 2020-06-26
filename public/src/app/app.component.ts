@@ -7,6 +7,9 @@ import { TaskService } from './task.service';
     styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+
+    a1c:any;
+
     // tasks:any;
     // onetask:any;
     // createtask:any;
@@ -17,11 +20,8 @@ export class AppComponent implements OnInit {
     constructor(){}
 
     ngOnInit(){
-        console.log("app-root initiated")
-        // this.createtask = {
-        //     title: "",
-        //     description: ""
-        // }
+        
+    
     }
 
 }
