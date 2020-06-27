@@ -11,10 +11,10 @@
 }
 
 .container {
-    width: 360px;
+    width: 100%;
     min-height: 800px;
     margin: 0px auto;
-    padding: 60px;
+    padding: 5%;
     font-size: 15px;
     background-color: rgb(160, 163, 154);
 }
