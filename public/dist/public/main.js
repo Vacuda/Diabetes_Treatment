@@ -688,6 +688,7 @@ let ComboComponent = class ComboComponent {
             this.active = false;
         }
     }
+    //open - close
     OnClick() {
         if (this.open === true) {
             this.open = false;
@@ -754,6 +755,7 @@ let DualComponent = class DualComponent {
             this.active = false;
         }
     }
+    //open - close
     OnClick() {
         if (this.open === true) {
             this.open = false;
@@ -931,6 +933,7 @@ let MetforminComponent = class MetforminComponent {
             this.active = false;
         }
     }
+    //open - close
     OnClick() {
         if (this.open === true) {
             this.open = false;
@@ -997,6 +1000,7 @@ let MonoComponent = class MonoComponent {
             this.active = false;
         }
     }
+    //open - close
     OnClick() {
         if (this.open === true) {
             this.open = false;
@@ -1063,6 +1067,7 @@ let TripleComponent = class TripleComponent {
             this.active = false;
         }
     }
+    //open - close
     OnClick() {
         if (this.open === true) {
             this.open = false;

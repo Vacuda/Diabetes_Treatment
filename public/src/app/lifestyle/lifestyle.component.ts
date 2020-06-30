@@ -17,23 +17,23 @@ export class LifestyleComponent implements OnInit {
 
     }
 
-  ngOnChanges() {
-    if (this.a1c >= 9 && this.a1c < 10){
-      this.active = true;
+    ngOnChanges() {
+        if (this.a1c >= 9 && this.a1c < 10){
+        this.active = true;
+        }
+        else{
+        this.active = false;
+        }
     }
-    else{
-      this.active = false;
-    }
-  }
 
-  //open - close
-  OnClick() {
-    if (this.open === true){
-      this.open = false;
+    //open - close
+    OnClick() {
+        if (this.open === true){
+        this.open = false;
+        }
+        else {
+        this.open = true;
+        }
     }
-    else {
-      this.open = true;
-    }
-  }
 
 }
