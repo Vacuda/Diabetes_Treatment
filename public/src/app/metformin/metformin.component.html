@@ -1,0 +1,68 @@
+<div [ngClass]="{'active':active === true}" 
+    class="info_container">
+    <h6 (click)="OnClick()">Metaformin</h6>
+
+    <div *ngIf="open === true" class="infoback">
+        
+        <table>
+            <tr>
+                <th>Efficacy</th>
+                <td>High</td>
+            </tr>
+            <tr>
+                <th>Hypoglycemia</th>
+                <td>No</td>
+            </tr>
+            <tr>
+                <th>Weight Change</th>
+                <td>Neutral or Modest Loss</td>
+            </tr>
+            <tr>
+                <th>Cost</th>
+                <td>Low</td>
+            </tr>
+            <tr>
+                <th>Oral/SQ</th>
+                <td>Oral</td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <th>CV Effects</th>
+                <td>
+                    <table>
+                        <tr>
+                            <th>ASCVD</th>
+                            <td>Potential Benefit</td>
+                        </tr>
+                        <tr>
+                            <th>CHF</th>
+                            <td>Neutral</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <th>Renal Effects</th>
+                <td>
+                    <table>
+                        <tr>
+                            <th>Progression of DKD</th>
+                            <td>Neutral</td>
+                        </tr>
+                        <tr>
+                            <th>Dosing</th>
+                            <td>Contraindicated with eGRF &lt30</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr></tr>
+        </table>
+
+
+        <div class="division">~~~~</div>
+
+    </div>
+</div>

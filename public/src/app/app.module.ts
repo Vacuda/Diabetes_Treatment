@@ -12,6 +12,7 @@ import { MonoComponent } from './mono/mono.component';
 import { DualComponent } from './dual/dual.component';
 import { TripleComponent } from './triple/triple.component';
 import { ComboComponent } from './combo/combo.component';
+import { MetforminComponent } from './metformin/metformin.component';
 // import { ShowComponent } from './show/show.component';
 
 @NgModule({
@@ -22,6 +23,7 @@ import { ComboComponent } from './combo/combo.component';
     DualComponent,
     TripleComponent,
     ComboComponent,
+    MetforminComponent,
     // ShowComponent
   ],
   imports: [

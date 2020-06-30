@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
+/* ----------SLIDER-------------*/
+
 .slidecontainer {
     padding-left: 10%;
     padding-right: 10%;
@@ -23,12 +25,11 @@
     transition: opacity .2s;
 }
 
-/* Mouse-over effects */
 .slider:hover {
     opacity: 1; /* Fully shown on mouse-over */
 }
   
-/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+/* The slider handle */
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none; /* Override default look */
     appearance: none;
@@ -49,7 +50,13 @@
 
 /* ------------------------------*/
 
-
+.therapy_container {
+    margin: 0px auto;
+    display: block;
+    width: 90%;
+    padding: 5px;
+    /* outline: 1px dashed blue; */
+}
 
 h6, p {
     text-align: center;
@@ -74,11 +81,37 @@ header {
     padding: 5px;
 }
 
+.infoback {
+    margin-top: 5px;
+    background-color: lightgrey;
+    padding: 5px;
+    outline: 1px solid grey;
+}
+
+/* -----------INFO TABLES-------------*/
+
+table {
+    margin: 5px auto;
+    display: block;
+    background-color: yellow;
+}
+
+th, td {
+    border: 1px solid grey;
+}
+
+/* -----------ACTIVE-------------*/
+
 .active header {
     background-color: orange;
 }
 
 .active .cardback {
     background-color: rgb(255, 255, 255);
+    outline: 1px solid orange;
+}
+
+.active .infoback {
+    background-color: lightpink;
     outline: 1px solid orange;
 }
