@@ -58,7 +58,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div [ngClass]=\"{'active':active === true}\" \n    class=\"therapy_container\">\n    <header (click)=\"OnClick()\">Dual Therapy</header>\n\n    <div *ngIf=\"open === true\" class=\"cardback\">\n        \n        <app-lifestyle [a1c]=\"a1c\"></app-lifestyle>\n        <app-metformin [a1c]=\"a1c\"></app-metformin>\n        <h6>Additional Agent</h6>\n        <div class=\"division\">~~~~</div>\n\n    </div>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div [ngClass]=\"{'active':active === true}\" \n    class=\"therapy_container\">\n    <header (click)=\"OnClick()\">Dual Therapy</header>\n\n    <div *ngIf=\"open === true\" class=\"cardback\">\n        \n        <app-lifestyle [active]=\"active\"></app-lifestyle>\n        <app-metformin [active]=\"active\"></app-metformin>\n        <h6>Additional Agent</h6>\n        <div class=\"division\">~~~~</div>\n\n    </div>\n</div>");
 
 /***/ }),
 
@@ -110,7 +110,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div [ngClass]=\"{'active':active === true}\" \n    class=\"therapy_container\">\n    <header (click)=\"OnClick()\">Mono Therapy</header>\n\n    <div *ngIf=\"open === true\" class=\"cardback\">\n\n        <app-lifestyle [a1c]=\"a1c\"></app-lifestyle>\n        <app-metformin [a1c]=\"a1c\"></app-metformin>\n        <div class=\"division\">~~~~</div>\n\n        <p>Initiate metformin therapy if no contradictions</p>\n        \n    </div>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div [ngClass]=\"{'active':active === true}\" \n    class=\"therapy_container\">\n    <header (click)=\"OnClick()\">Mono Therapy</header>\n\n    <div *ngIf=\"open === true\" class=\"cardback\">\n\n        <app-lifestyle [active]=\"active\"></app-lifestyle>\n        <app-metformin [active]=\"active\"></app-metformin>\n        <div class=\"division\">~~~~</div>\n\n        <p>Initiate metformin therapy if no contradictions</p>\n        \n    </div>\n</div>");
 
 /***/ }),
 
@@ -123,7 +123,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div [ngClass]=\"{'active':active === true}\" \n    class=\"therapy_container\">\n    <header (click)=\"OnClick()\">Triple Therapy</header>\n\n    <div *ngIf=\"open === true\" class=\"cardback\">\n\n        <app-lifestyle [a1c]=\"a1c\"></app-lifestyle>\n        <app-metformin [a1c]=\"a1c\"></app-metformin>\n        <h6>First Agent</h6>\n        <h6>Second Agent</h6>\n        <div class=\"division\">~~~~</div>\n\n    </div>\n</div>\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div [ngClass]=\"{'active':active === true}\" \n    class=\"therapy_container\">\n    <header (click)=\"OnClick()\">Triple Therapy</header>\n\n    <div *ngIf=\"open === true\" class=\"cardback\">\n\n        <app-lifestyle [active]=\"active\"></app-lifestyle>\n        <app-metformin [active]=\"active\"></app-metformin>\n        <h6>First Agent</h6>\n        <h6>Second Agent</h6>\n        <div class=\"division\">~~~~</div>\n\n    </div>\n</div>\n\n");
 
 /***/ }),
 
@@ -853,18 +853,11 @@ __webpack_require__.r(__webpack_exports__);
 
 let LifestyleComponent = class LifestyleComponent {
     constructor() {
-        this.active = false;
         this.open = false;
     }
     ngOnInit() {
     }
     ngOnChanges() {
-        if (this.a1c >= 9 && this.a1c < 10) {
-            this.active = true;
-        }
-        else {
-            this.active = false;
-        }
     }
     //open - close
     OnClick() {
@@ -878,7 +871,7 @@ let LifestyleComponent = class LifestyleComponent {
 };
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
-], LifestyleComponent.prototype, "a1c", void 0);
+], LifestyleComponent.prototype, "active", void 0);
 LifestyleComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-lifestyle',
@@ -920,18 +913,11 @@ __webpack_require__.r(__webpack_exports__);
 
 let MetforminComponent = class MetforminComponent {
     constructor() {
-        this.active = false;
         this.open = false;
     }
     ngOnInit() {
     }
     ngOnChanges() {
-        if (this.a1c >= 9 && this.a1c < 10) {
-            this.active = true;
-        }
-        else {
-            this.active = false;
-        }
     }
     //open - close
     OnClick() {
@@ -945,7 +931,7 @@ let MetforminComponent = class MetforminComponent {
 };
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
-], MetforminComponent.prototype, "a1c", void 0);
+], MetforminComponent.prototype, "active", void 0);
 MetforminComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-metformin',

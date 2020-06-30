@@ -7,8 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class LifestyleComponent implements OnInit {
 
-    @Input() a1c:any;
-    active: boolean = false;
+    @Input() active:boolean;
     open: boolean = false;
 
     constructor() { }
@@ -18,12 +17,6 @@ export class LifestyleComponent implements OnInit {
     }
 
     ngOnChanges() {
-        if (this.a1c >= 9 && this.a1c < 10){
-        this.active = true;
-        }
-        else{
-        this.active = false;
-        }
     }
 
     //open - close
