@@ -13,6 +13,7 @@ import { DualComponent } from './dual/dual.component';
 import { TripleComponent } from './triple/triple.component';
 import { ComboComponent } from './combo/combo.component';
 import { MetforminComponent } from './metformin/metformin.component';
+import { LifestyleComponent } from './lifestyle/lifestyle.component';
 // import { ShowComponent } from './show/show.component';
 
 @NgModule({
@@ -24,6 +25,7 @@ import { MetforminComponent } from './metformin/metformin.component';
     TripleComponent,
     ComboComponent,
     MetforminComponent,
+    LifestyleComponent,
     // ShowComponent
   ],
   imports: [

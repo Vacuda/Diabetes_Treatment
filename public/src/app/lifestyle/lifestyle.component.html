@@ -1,0 +1,19 @@
+<div [ngClass]="{'active':active === true}" 
+    class="info_container">
+    <h6 (click)="OnClick()">Lifestyle Management</h6>
+
+    <div *ngIf="open === true" class="infoback">
+        
+        <ul>
+            <li>Diabetes self-management education (DSME)</li>
+            <li>Diabetes self-management support (DSMS)</li>
+            <li>Nuitrition therapy</li>
+            <li>Physical activity</li>
+            <li>Smoking cessation counseling</li>
+            <li>Psychosocial care</li>
+        </ul>
+
+        <div class="division">~~~~</div>
+
+    </div>
+</div>
