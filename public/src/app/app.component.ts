@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TaskService } from './task.service';
+import { SharedBinService } from './shared-bin.service';
 
 @Component({
     selector: 'app-root',
@@ -8,21 +8,24 @@ import { TaskService } from './task.service';
 })
 export class AppComponent implements OnInit {
 
-    a1c:any;
-
-    // tasks:any;
-    // onetask:any;
-    // createtask:any;
-    // updatetask:any;
-    // @Input() taskToShow:any;
-    // errors:any;
-
-    constructor(){}
+    constructor(private sharedBin: SharedBinService){}
 
     ngOnInit(){
-        
-    
+        // this.sharedBin.set_example("mage");
     }
+    
+    ngOnChanges(){
+        // console.log("hhehe");
+        // if (this.sharedBin.a1c >= 9 && this.sharedBin.a1c < 10){
+        //     console.log("hyoyoyoyoyo");
+        //     this.sharedBin.active = "triple";
+        // }
+        // else{
+        //     this.sharedBin.active = "";
+        // }
+    }
+
+    
 
 }
 

@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { HttpClientModule } from '@angular/common/http';
-// import { TaskService } from './task.service';
 import { FormsModule } from '@angular/forms';
 import { MonoComponent } from './mono/mono.component';
 import { DualComponent } from './dual/dual.component';
@@ -14,7 +13,7 @@ import { ComboComponent } from './combo/combo.component';
 import { MetforminComponent } from './metformin/metformin.component';
 import { LifestyleComponent } from './lifestyle/lifestyle.component';
 import { PatientComponent } from './patient/patient.component';
-// import { ShowComponent } from './show/show.component';
+import { SharedBinService } from './shared-bin.service';
 
 @NgModule({
   declarations: [
@@ -33,7 +32,7 @@ import { PatientComponent } from './patient/patient.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [AppComponent],
+  providers: [AppComponent, SharedBinService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

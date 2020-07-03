@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { SharedBinService } from '../shared-bin.service';
 
 @Component({
     selector: 'app-metformin',
@@ -7,10 +8,10 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class MetforminComponent implements OnInit {
 
-    @Input() active: boolean;
+    @Input()active: boolean;
     open: boolean = false;
 
-    constructor() { }
+    constructor( private sharedBin: SharedBinService ) { }
 
     ngOnInit() {
 

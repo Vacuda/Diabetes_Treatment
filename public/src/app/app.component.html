@@ -2,12 +2,13 @@
 <div class="container">
 
     <app-patient></app-patient>
-    <app-mono [a1c]="a1c"></app-mono>
-    <app-dual [a1c]="a1c"></app-dual>
-    <app-triple [a1c]="a1c"></app-triple>
-    <app-combo [a1c]="a1c"></app-combo>
+    <app-mono></app-mono>
+    <app-dual></app-dual>
+    <app-triple></app-triple>
+    <app-combo></app-combo>
 
-
+    <h4>--{{this.sharedBin.active}}--</h4>
+    <h4>-{{this.sharedBin.a1c}}-</h4>
     <!-- <router-outlet></router-outlet> -->
 
 </div>

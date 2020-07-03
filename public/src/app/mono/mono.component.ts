@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { SharedBinService } from '../shared-bin.service';
 
 @Component({
     selector: 'app-mono',
@@ -7,32 +8,32 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class MonoComponent implements OnInit {
 
-    @Input() a1c:any;
-    active: boolean = false;
+    active:boolean;
+
     open: boolean = false;
 
-    constructor() { }
+    constructor( private sharedBin: SharedBinService ) { }
 
     ngOnInit() {
-
+        this.active = true;
     }
 
     ngOnChanges() {
-        if (this.a1c >= 7 && this.a1c < 9){
-        this.active = true;
-        }
-        else{
-        this.active = false;
-        }
+        // if (this.a1c >= 7 && this.a1c < 9){
+        // this.active = true;
+        // }
+        // else{
+        // this.active = false;
+        // }
     }
 
     //open - close
     OnClick() {
         if (this.open === true){
-        this.open = false;
+            this.open = false;
         }
         else {
-        this.open = true;
+            this.open = true;
         }
     }
 

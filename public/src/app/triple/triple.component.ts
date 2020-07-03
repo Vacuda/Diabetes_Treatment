@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { SharedBinService } from '../shared-bin.service';
 
 @Component({
     selector: 'app-triple',
@@ -7,23 +8,22 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TripleComponent implements OnInit {
 
-    @Input() a1c:any;
     active: boolean = false;
     open: boolean = false;
 
-    constructor() { }
+    constructor( private sharedBin: SharedBinService ) { }
 
     ngOnInit() {
 
     }
 
     ngOnChanges() {
-        if (this.a1c >= 9 && this.a1c < 10){
-        this.active = true;
-        }
-        else{
-        this.active = false;
-        }
+        // if (this.a1c >= 9 && this.a1c < 10){
+        // this.active = true;
+        // }
+        // else{
+        // this.active = false;
+        // }
     }
 
     //open - close

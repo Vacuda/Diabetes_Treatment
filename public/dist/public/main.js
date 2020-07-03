@@ -32,7 +32,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"container\">\n\n    <app-patient></app-patient>\n    <app-mono [a1c]=\"a1c\"></app-mono>\n    <app-dual [a1c]=\"a1c\"></app-dual>\n    <app-triple [a1c]=\"a1c\"></app-triple>\n    <app-combo [a1c]=\"a1c\"></app-combo>\n\n\n    <!-- <router-outlet></router-outlet> -->\n\n</div>\n\n\n<!-- \n\n    <button [routerLink]=\"['/alpha']\">Load Alpha</button>\n    <a [routerLink] = \"['details', 5]\"> Go to /products/details/5 </a> \n\n\n    <div *ngIf=\"errors\">\n        <h4>Errors:</h4>\n        <ul>\n            <div *ngFor=\"let item of errors\">\n                <li class=\"errors\">{{item.message}}</li>\n            </div>\n        </ul>\n\n    </div>\n\n\n\n\n    <div *ngIf=\"createtask\">\n        <form (submit)=\"createTask()\">\n            <div class=\"form-group\">\n                <label for=\"title\">Task Name:</label>\n                <input name=\"createtask.title\" [(ngModel)]=\"createtask.title\" class=\"form-control\" id=\"title\" placeholder=\"---\">\n            </div>\n            <div class=\"form-group\">\n                <label for=\"description\">Description:</label>\n                <textarea name=\"createtask.description\" [(ngModel)]=\"createtask.description\" class=\"form-control\" id=\"description\" rows=\"3\" placeholder=\"---\"></textarea>\n            </div>\n\n            <button class=\"btn btn-warning\" type=\"submit\">Create</button>\n        </form>\n    </div>\n\n    <div *ngIf=\"updatetask\">\n        <form (submit)=\"updateTask(onetask._id)\">\n            <div class=\"form-group\">\n                <label for=\"title\">Task Name:</label>\n                <input name=\"updatetask.title\" [(ngModel)]=\"updatetask.title\" class=\"form-control\" id=\"title\" value=\"updatetask.title\">\n            </div>\n            <div class=\"form-group\">\n                <label for=\"description\">Description:</label>\n                <textarea name=\"updatetask.description\" [(ngModel)]=\"updatetask.description\" class=\"form-control\" id=\"description\" rows=\"3\" value=\"updatetask.description\"></textarea>\n            </div>\n\n            <button class=\"btn btn-warning\" type=\"submit\">Submit Edits</button>\n        </form>\n    </div>\n\n    <div class=\"division\"></div>\n\n    <button class=\"btn btn-primary\" (click)=\"getTasks()\">Click for Tasks</button>\n\n    <div class=\"division\"></div>\n\n    <div class=\"centered\" *ngFor=\"let task of tasks\">\n\n        <h2><a id=\"clickable\" (click)=\"getOneTask(task._id)\">{{task.title}}</a></h2>\n        <div class=\"division\"></div>\n    </div> -->\n");
+/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"container\">\n\n    <app-patient></app-patient>\n    <app-mono></app-mono>\n    <app-dual></app-dual>\n    <app-triple></app-triple>\n    <app-combo></app-combo>\n\n    <h4>--{{this.sharedBin.active}}--</h4>\n    <h4>-{{this.sharedBin.a1c}}-</h4>\n    <!-- <router-outlet></router-outlet> -->\n\n</div>\n\n\n<!-- \n\n    <button [routerLink]=\"['/alpha']\">Load Alpha</button>\n    <a [routerLink] = \"['details', 5]\"> Go to /products/details/5 </a> \n\n\n    <div *ngIf=\"errors\">\n        <h4>Errors:</h4>\n        <ul>\n            <div *ngFor=\"let item of errors\">\n                <li class=\"errors\">{{item.message}}</li>\n            </div>\n        </ul>\n\n    </div>\n\n\n\n\n    <div *ngIf=\"createtask\">\n        <form (submit)=\"createTask()\">\n            <div class=\"form-group\">\n                <label for=\"title\">Task Name:</label>\n                <input name=\"createtask.title\" [(ngModel)]=\"createtask.title\" class=\"form-control\" id=\"title\" placeholder=\"---\">\n            </div>\n            <div class=\"form-group\">\n                <label for=\"description\">Description:</label>\n                <textarea name=\"createtask.description\" [(ngModel)]=\"createtask.description\" class=\"form-control\" id=\"description\" rows=\"3\" placeholder=\"---\"></textarea>\n            </div>\n\n            <button class=\"btn btn-warning\" type=\"submit\">Create</button>\n        </form>\n    </div>\n\n    <div *ngIf=\"updatetask\">\n        <form (submit)=\"updateTask(onetask._id)\">\n            <div class=\"form-group\">\n                <label for=\"title\">Task Name:</label>\n                <input name=\"updatetask.title\" [(ngModel)]=\"updatetask.title\" class=\"form-control\" id=\"title\" value=\"updatetask.title\">\n            </div>\n            <div class=\"form-group\">\n                <label for=\"description\">Description:</label>\n                <textarea name=\"updatetask.description\" [(ngModel)]=\"updatetask.description\" class=\"form-control\" id=\"description\" rows=\"3\" value=\"updatetask.description\"></textarea>\n            </div>\n\n            <button class=\"btn btn-warning\" type=\"submit\">Submit Edits</button>\n        </form>\n    </div>\n\n    <div class=\"division\"></div>\n\n    <button class=\"btn btn-primary\" (click)=\"getTasks()\">Click for Tasks</button>\n\n    <div class=\"division\"></div>\n\n    <div class=\"centered\" *ngFor=\"let task of tasks\">\n\n        <h2><a id=\"clickable\" (click)=\"getOneTask(task._id)\">{{task.title}}</a></h2>\n        <div class=\"division\"></div>\n    </div> -->\n");
 
 /***/ }),
 
@@ -45,7 +45,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div [ngClass]=\"{'active':active === true}\" \n    class=\"therapy_container\"\n    (click)=\"OnClick()\">\n    <header>Combination Injection Therapy</header>\n\n    <div *ngIf=\"open === true\" class=\"cardback\">\n\n        <h6>More Info To Come</h6>\n        \n    </div>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div [ngClass]=\"{'active':this.sharedBin.active === 'combo'}\" \n    class=\"therapy_container\"\n    (click)=\"OnClick()\">\n    <header>Combination Injection Therapy</header>\n\n    <div *ngIf=\"open === true\" class=\"cardback\">\n\n        <h6>More Info To Come</h6>\n        \n    </div>\n</div>");
 
 /***/ }),
 
@@ -58,7 +58,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div [ngClass]=\"{'active':active === true}\" \n    class=\"therapy_container\">\n    <header (click)=\"OnClick()\">Dual Therapy</header>\n\n    <div *ngIf=\"open === true\" class=\"cardback\">\n        \n        <app-lifestyle [active]=\"active\"></app-lifestyle>\n        <app-metformin [active]=\"active\"></app-metformin>\n        <h6>Additional Agent</h6>\n        <div class=\"division\">~~~~</div>\n\n    </div>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div [ngClass]=\"{'active':this.sharedBin.active === 'dual'}\" \n    class=\"therapy_container\">\n    <header (click)=\"OnClick()\">Dual Therapy</header>\n\n    <div *ngIf=\"open === true\" class=\"cardback\">\n        \n        <app-lifestyle></app-lifestyle>\n        <app-metformin></app-metformin>\n        <h6>Additional Agent</h6>\n        <div class=\"division\">~~~~</div>\n\n    </div>\n</div>");
 
 /***/ }),
 
@@ -97,7 +97,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div [ngClass]=\"{'active':active === true}\" \n    class=\"therapy_container\">\n    <header (click)=\"OnClick()\">Mono Therapy</header>\n\n    <div *ngIf=\"open === true\" class=\"cardback\">\n\n        <app-lifestyle [active]=\"active\"></app-lifestyle>\n        <app-metformin [active]=\"active\"></app-metformin>\n        <div class=\"division\">~~~~</div>\n\n        <p>Initiate metformin therapy if no contradictions</p>\n        \n    </div>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div [ngClass]=\"{'active':active === true}\" \n    class=\"therapy_container\">\n    <header (click)=\"OnClick()\">Mono Therapy</header>\n\n    <div *ngIf=\"open === true\" class=\"cardback\">\n\n        <app-lifestyle [active] = \"active\"></app-lifestyle>\n        <app-metformin [active] = \"active\"></app-metformin> \n        <div class=\"division\">~~~~</div>\n\n        <p>Initiate metformin therapy if no contradictions</p>\n        \n    </div>\n</div>");
 
 /***/ }),
 
@@ -110,7 +110,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"patient_container\">\n\n    <header (click)=\"OnClick()\">Patient Info</header>\n\n    <div *ngIf=\"open == false\">\n        <h3>{{a1c}}%</h3>\n    </div>\n\n    <div *ngIf=\"open == true\">\n        <h5>~~~~~~~~~~~</h5>\n        <h3>Enter A1C %</h3>\n        <h5>~~~~~~~~~~~</h5>\n\n        <input name=\"a1c\" [(ngModel)]=\"a1c\" class=\"form-control extra\" placeholder=\"---\">\n\n        <div class=\"slidecontainer\">\n            <input name=\"a1c\" [(ngModel)]=\"a1c\" \n            type=\"range\" min=\"5\" max=\"12\" value=\"50\" class=\"slider\" step=\"0.1\">\n        </div>\n\n        <h3>{{a1c}}%</h3>\n    </div>\n\n</div>\n\n\n\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"patient_container\">\n\n    <header (click)=\"OnClick()\">Patient Info</header>\n\n    <div *ngIf=\"open == false\">\n        <h3>{{this.sharedBin.a1c}}%</h3>\n    </div>\n\n    <div *ngIf=\"open == true\">\n        <h5>~~~~~~~~~~~</h5>\n        <h3>Enter A1C %</h3>\n        <h5>~~~~~~~~~~~</h5>\n\n        <input name=\"this.sharedBin.a1c\" [(ngModel)]=\"this.sharedBin.a1c\" class=\"form-control extra\" placeholder=\"---\">\n\n        <div class=\"slidecontainer\">\n            <input name=\"this.sharedBin.a1c\" [(ngModel)]=\"this.sharedBin.a1c\" \n            type=\"range\" min=\"5\" max=\"12\" value=\"50\" class=\"slider\" step=\"0.1\">\n        </div>\n\n        <h3>{{this.sharedBin.a1c}}%</h3>\n    </div>\n\n</div>\n\n\n\n\n");
 
 /***/ }),
 
@@ -123,7 +123,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div [ngClass]=\"{'active':active === true}\" \n    class=\"therapy_container\">\n    <header (click)=\"OnClick()\">Triple Therapy</header>\n\n    <div *ngIf=\"open === true\" class=\"cardback\">\n\n        <app-lifestyle [active]=\"active\"></app-lifestyle>\n        <app-metformin [active]=\"active\"></app-metformin>\n        <h6>First Agent</h6>\n        <h6>Second Agent</h6>\n        <div class=\"division\">~~~~</div>\n\n    </div>\n</div>\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div [ngClass]=\"{'active':this.sharedBin.active === 'triple'}\" \n    class=\"therapy_container\">\n    <header (click)=\"OnClick()\">Triple Therapy</header>\n\n    <div *ngIf=\"open === true\" class=\"cardback\">\n\n        <app-lifestyle></app-lifestyle>\n        <app-metformin></app-metformin>\n        <h6>First Agent</h6>\n        <h6>Second Agent</h6>\n        <div class=\"division\">~~~~</div>\n\n    </div>\n</div>\n\n");
 
 /***/ }),
 
@@ -395,9 +395,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 
-// import { EditComponent } from './edit/edit.component';
-// import { NewComponent } from './new/new.component';
-// import { ListComponent } from './list/list.component';
 // import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
@@ -456,19 +453,31 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _shared_bin_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./shared-bin.service */ "./src/app/shared-bin.service.ts");
+
 
 
 let AppComponent = class AppComponent {
-    // tasks:any;
-    // onetask:any;
-    // createtask:any;
-    // updatetask:any;
-    // @Input() taskToShow:any;
-    // errors:any;
-    constructor() { }
+    constructor(sharedBin) {
+        this.sharedBin = sharedBin;
+    }
     ngOnInit() {
+        // this.sharedBin.set_example("mage");
+    }
+    ngOnChanges() {
+        // console.log("hhehe");
+        // if (this.sharedBin.a1c >= 9 && this.sharedBin.a1c < 10){
+        //     console.log("hyoyoyoyoyo");
+        //     this.sharedBin.active = "triple";
+        // }
+        // else{
+        //     this.sharedBin.active = "";
+        // }
     }
 };
+AppComponent.ctorParameters = () => [
+    { type: _shared_bin_service__WEBPACK_IMPORTED_MODULE_2__["SharedBinService"] }
+];
 AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-root',
@@ -604,14 +613,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _metformin_metformin_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./metformin/metformin.component */ "./src/app/metformin/metformin.component.ts");
 /* harmony import */ var _lifestyle_lifestyle_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./lifestyle/lifestyle.component */ "./src/app/lifestyle/lifestyle.component.ts");
 /* harmony import */ var _patient_patient_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./patient/patient.component */ "./src/app/patient/patient.component.ts");
-
-
-
-
-
-
-// import { TaskService } from './task.service';
-
+/* harmony import */ var _shared_bin_service__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./shared-bin.service */ "./src/app/shared-bin.service.ts");
 
 
 
@@ -619,7 +621,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-// import { ShowComponent } from './show/show.component';
+
+
+
+
+
+
+
+
 let AppModule = class AppModule {
 };
 AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -640,7 +649,7 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClientModule"],
             _angular_forms__WEBPACK_IMPORTED_MODULE_6__["FormsModule"]
         ],
-        providers: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]],
+        providers: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"], _shared_bin_service__WEBPACK_IMPORTED_MODULE_14__["SharedBinService"]],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
     })
 ], AppModule);
@@ -674,22 +683,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ComboComponent", function() { return ComboComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _shared_bin_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../shared-bin.service */ "./src/app/shared-bin.service.ts");
+
 
 
 let ComboComponent = class ComboComponent {
-    constructor() {
+    constructor(sharedBin) {
+        this.sharedBin = sharedBin;
         this.active = false;
         this.open = false;
     }
     ngOnInit() {
     }
     ngOnChanges() {
-        if (this.a1c >= 10) {
-            this.active = true;
-        }
-        else {
-            this.active = false;
-        }
+        // if (this.a1c >= 10){
+        // this.active = true;
+        // }
+        // else{
+        // this.active = false;
+        // }
     }
     //open - close
     OnClick() {
@@ -701,9 +713,9 @@ let ComboComponent = class ComboComponent {
         }
     }
 };
-tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
-], ComboComponent.prototype, "a1c", void 0);
+ComboComponent.ctorParameters = () => [
+    { type: _shared_bin_service__WEBPACK_IMPORTED_MODULE_2__["SharedBinService"] }
+];
 ComboComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-combo',
@@ -741,22 +753,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DualComponent", function() { return DualComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _shared_bin_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../shared-bin.service */ "./src/app/shared-bin.service.ts");
+
 
 
 let DualComponent = class DualComponent {
-    constructor() {
+    constructor(sharedBin) {
+        this.sharedBin = sharedBin;
         this.active = false;
         this.open = false;
     }
     ngOnInit() {
     }
     ngOnChanges() {
-        if (this.a1c >= 9 && this.a1c < 10) {
-            this.active = true;
-        }
-        else {
-            this.active = false;
-        }
+        // if (this.a1c >= 9 && this.a1c < 10){
+        // this.active = true;
+        // }
+        // else{
+        // this.active = false;
+        // }
     }
     //open - close
     OnClick() {
@@ -768,9 +783,9 @@ let DualComponent = class DualComponent {
         }
     }
 };
-tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
-], DualComponent.prototype, "a1c", void 0);
+DualComponent.ctorParameters = () => [
+    { type: _shared_bin_service__WEBPACK_IMPORTED_MODULE_2__["SharedBinService"] }
+];
 DualComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-dual',
@@ -808,10 +823,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LifestyleComponent", function() { return LifestyleComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _shared_bin_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../shared-bin.service */ "./src/app/shared-bin.service.ts");
+
 
 
 let LifestyleComponent = class LifestyleComponent {
-    constructor() {
+    constructor(sharedBin) {
+        this.sharedBin = sharedBin;
         this.open = false;
     }
     ngOnInit() {
@@ -828,6 +846,9 @@ let LifestyleComponent = class LifestyleComponent {
         }
     }
 };
+LifestyleComponent.ctorParameters = () => [
+    { type: _shared_bin_service__WEBPACK_IMPORTED_MODULE_2__["SharedBinService"] }
+];
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
 ], LifestyleComponent.prototype, "active", void 0);
@@ -868,10 +889,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MetforminComponent", function() { return MetforminComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _shared_bin_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../shared-bin.service */ "./src/app/shared-bin.service.ts");
+
 
 
 let MetforminComponent = class MetforminComponent {
-    constructor() {
+    constructor(sharedBin) {
+        this.sharedBin = sharedBin;
         this.open = false;
     }
     ngOnInit() {
@@ -888,6 +912,9 @@ let MetforminComponent = class MetforminComponent {
         }
     }
 };
+MetforminComponent.ctorParameters = () => [
+    { type: _shared_bin_service__WEBPACK_IMPORTED_MODULE_2__["SharedBinService"] }
+];
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
 ], MetforminComponent.prototype, "active", void 0);
@@ -928,22 +955,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MonoComponent", function() { return MonoComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _shared_bin_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../shared-bin.service */ "./src/app/shared-bin.service.ts");
+
 
 
 let MonoComponent = class MonoComponent {
-    constructor() {
-        this.active = false;
+    constructor(sharedBin) {
+        this.sharedBin = sharedBin;
         this.open = false;
     }
     ngOnInit() {
+        this.active = true;
     }
     ngOnChanges() {
-        if (this.a1c >= 7 && this.a1c < 9) {
-            this.active = true;
-        }
-        else {
-            this.active = false;
-        }
+        // if (this.a1c >= 7 && this.a1c < 9){
+        // this.active = true;
+        // }
+        // else{
+        // this.active = false;
+        // }
     }
     //open - close
     OnClick() {
@@ -955,9 +985,9 @@ let MonoComponent = class MonoComponent {
         }
     }
 };
-tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
-], MonoComponent.prototype, "a1c", void 0);
+MonoComponent.ctorParameters = () => [
+    { type: _shared_bin_service__WEBPACK_IMPORTED_MODULE_2__["SharedBinService"] }
+];
 MonoComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-mono',
@@ -995,12 +1025,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PatientComponent", function() { return PatientComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _shared_bin_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../shared-bin.service */ "./src/app/shared-bin.service.ts");
+
 
 
 let PatientComponent = class PatientComponent {
-    constructor() { }
+    constructor(sharedBin) {
+        this.sharedBin = sharedBin;
+    }
     ngOnInit() {
         this.open = true;
+    }
+    ngOnChanges() {
     }
     //open - close
     OnClick() {
@@ -1012,9 +1048,9 @@ let PatientComponent = class PatientComponent {
         }
     }
 };
-tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])()
-], PatientComponent.prototype, "a1c", void 0);
+PatientComponent.ctorParameters = () => [
+    { type: _shared_bin_service__WEBPACK_IMPORTED_MODULE_2__["SharedBinService"] }
+];
 PatientComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-patient',
@@ -1022,6 +1058,37 @@ PatientComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./patient.component.css */ "./src/app/patient/patient.component.css")).default]
     })
 ], PatientComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/shared-bin.service.ts":
+/*!***************************************!*\
+  !*** ./src/app/shared-bin.service.ts ***!
+  \***************************************/
+/*! exports provided: SharedBinService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SharedBinService", function() { return SharedBinService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+let SharedBinService = class SharedBinService {
+    // a1cchange: Subject<string> = new Subject<number>();
+    constructor() {
+        this.a1c = 56;
+        this.active = "mono";
+    }
+};
+SharedBinService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    })
+], SharedBinService);
 
 
 
@@ -1052,22 +1119,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TripleComponent", function() { return TripleComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _shared_bin_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../shared-bin.service */ "./src/app/shared-bin.service.ts");
+
 
 
 let TripleComponent = class TripleComponent {
-    constructor() {
+    constructor(sharedBin) {
+        this.sharedBin = sharedBin;
         this.active = false;
         this.open = false;
     }
     ngOnInit() {
     }
     ngOnChanges() {
-        if (this.a1c >= 9 && this.a1c < 10) {
-            this.active = true;
-        }
-        else {
-            this.active = false;
-        }
+        // if (this.a1c >= 9 && this.a1c < 10){
+        // this.active = true;
+        // }
+        // else{
+        // this.active = false;
+        // }
     }
     //open - close
     OnClick() {
@@ -1079,9 +1149,9 @@ let TripleComponent = class TripleComponent {
         }
     }
 };
-tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
-], TripleComponent.prototype, "a1c", void 0);
+TripleComponent.ctorParameters = () => [
+    { type: _shared_bin_service__WEBPACK_IMPORTED_MODULE_2__["SharedBinService"] }
+];
 TripleComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-triple',

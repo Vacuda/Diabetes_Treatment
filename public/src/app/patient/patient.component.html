@@ -3,7 +3,7 @@
     <header (click)="OnClick()">Patient Info</header>
 
     <div *ngIf="open == false">
-        <h3>{{a1c}}%</h3>
+        <h3>{{this.sharedBin.a1c}}%</h3>
     </div>
 
     <div *ngIf="open == true">
@@ -11,14 +11,14 @@
         <h3>Enter A1C %</h3>
         <h5>~~~~~~~~~~~</h5>
 
-        <input name="a1c" [(ngModel)]="a1c" class="form-control extra" placeholder="---">
+        <input name="this.sharedBin.a1c" [(ngModel)]="this.sharedBin.a1c" class="form-control extra" placeholder="---">
 
         <div class="slidecontainer">
-            <input name="a1c" [(ngModel)]="a1c" 
+            <input name="this.sharedBin.a1c" [(ngModel)]="this.sharedBin.a1c" 
             type="range" min="5" max="12" value="50" class="slider" step="0.1">
         </div>
 
-        <h3>{{a1c}}%</h3>
+        <h3>{{this.sharedBin.a1c}}%</h3>
     </div>
 
 </div>

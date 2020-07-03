@@ -1,7 +1,4 @@
 
-// import { EditComponent } from './edit/edit.component';
-// import { NewComponent } from './new/new.component';
-// import { ListComponent } from './list/list.component';
 // import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';

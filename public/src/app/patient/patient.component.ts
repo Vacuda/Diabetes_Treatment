@@ -1,4 +1,6 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { SharedBinService } from '../shared-bin.service';
+
 
 @Component({
     selector: 'app-patient',
@@ -7,13 +9,16 @@ import { Component, OnInit, Output } from '@angular/core';
 })
 export class PatientComponent implements OnInit {
 
-    @Output() a1c: any;
     open: boolean;
 
-    constructor() { }
+    constructor( private sharedBin: SharedBinService ) { }
 
     ngOnInit() {
         this.open = true;
+    }
+    
+    ngOnChanges(){
+        
     }
 
     //open - close

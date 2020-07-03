@@ -1,11 +1,11 @@
-<div [ngClass]="{'active':active === true}" 
+<div [ngClass]="{'active':this.sharedBin.active === 'dual'}" 
     class="therapy_container">
     <header (click)="OnClick()">Dual Therapy</header>
 
     <div *ngIf="open === true" class="cardback">
         
-        <app-lifestyle [active]="active"></app-lifestyle>
-        <app-metformin [active]="active"></app-metformin>
+        <app-lifestyle></app-lifestyle>
+        <app-metformin></app-metformin>
         <h6>Additional Agent</h6>
         <div class="division">~~~~</div>
 
