@@ -12,7 +12,7 @@ export class SharedBinService {
     newly_diagnosed: boolean = true;
     have_symptoms: boolean = false;
 
-    a1c:number = 56;
+    a1c:number = 7.0;
     weight_lb: number;
     weight_kg: number;
     insulin_current: number;

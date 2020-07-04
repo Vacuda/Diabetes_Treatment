@@ -2,7 +2,7 @@
 
     <header (click)="OnClick()">Patient Info</header>
 
-    <div *ngIf="open == false">
+    <div *ngIf="open == false" class="cardback">
         <h6>A1C: {{this.sharedBin.a1c}}%</h6>
         <h6>Newly Diagnosed: 
             <span *ngIf="this.sharedBin.newly_diagnosed === true">Yes</span>
@@ -14,7 +14,7 @@
         </h6>
     </div>
 
-    <div *ngIf="open == true">
+    <div *ngIf="open == true" class="cardback">
 
         <div class="choice_box">
             <p>A1C%: </p>
@@ -46,9 +46,7 @@
             <span *ngIf="this.sharedBin.have_symptoms === false">No</span>
         </div>
 
-        
-
-        <h3>{{this.sharedBin.a1c}}%</h3>
+    
     </div>
 
 </div>
