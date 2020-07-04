@@ -3,20 +3,50 @@
     <header (click)="OnClick()">Patient Info</header>
 
     <div *ngIf="open == false">
-        <h3>{{this.sharedBin.a1c}}%</h3>
+        <h6>A1C: {{this.sharedBin.a1c}}%</h6>
+        <h6>Newly Diagnosed: 
+            <span *ngIf="this.sharedBin.newly_diagnosed === true">Yes</span>
+            <span *ngIf="this.sharedBin.newly_diagnosed === false">No</span>
+        </h6>
+        <h6>Has Symptoms: 
+            <span *ngIf="this.sharedBin.have_symptoms === true">Yes</span>
+            <span *ngIf="this.sharedBin.have_symptoms === false">No</span>
+        </h6>
     </div>
 
     <div *ngIf="open == true">
-        <h5>~~~~~~~~~~~</h5>
-        <h3>Enter A1C %</h3>
-        <h5>~~~~~~~~~~~</h5>
 
-        <input name="this.sharedBin.a1c" [(ngModel)]="this.sharedBin.a1c" class="form-control extra" placeholder="---">
-
-        <div class="slidecontainer">
-            <input name="this.sharedBin.a1c" [(ngModel)]="this.sharedBin.a1c" 
-            type="range" min="5" max="12" value="50" class="slider" step="0.1">
+        <div class="choice_box">
+            <p>A1C%: </p>
+            <input name="this.sharedBin.a1c" [(ngModel)]="this.sharedBin.a1c" class="form-control centered" placeholder="---">
+    
+            <div class="slider_container">
+                <input name="this.sharedBin.a1c" [(ngModel)]="this.sharedBin.a1c" 
+                type="range" min="5" max="12" value="50" class="slider" step="0.1">
+            </div>
         </div>
+
+        <div class="choice_box">
+            <p>New Patient: </p>
+            <label class="switch_container">
+                <input type="checkbox" [(ngModel)]="this.sharedBin.newly_diagnosed" class="form-control">
+                <span class="switch round"></span>
+            </label>
+            <span *ngIf="this.sharedBin.newly_diagnosed === true">Yes</span>
+            <span *ngIf="this.sharedBin.newly_diagnosed === false">No</span>
+        </div>
+
+        <div class="choice_box">
+            <p>Showing Symptoms: </p>
+            <label class="switch_container">
+                <input type="checkbox" [(ngModel)]="this.sharedBin.have_symptoms" class="form-control">
+                <span class="switch round"></span>
+            </label>
+            <span *ngIf="this.sharedBin.have_symptoms === true">Yes</span>
+            <span *ngIf="this.sharedBin.have_symptoms === false">No</span>
+        </div>
+
+        
 
         <h3>{{this.sharedBin.a1c}}%</h3>
     </div>

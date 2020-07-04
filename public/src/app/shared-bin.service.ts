@@ -6,8 +6,33 @@ import { Subject } from 'rxjs';
 })
 export class SharedBinService {
 
-    a1c:any = 56;
+    
     active:string = "mono";
+
+    newly_diagnosed: boolean = true;
+    have_symptoms: boolean = false;
+
+    a1c:number = 56;
+    weight_lb: number;
+    weight_kg: number;
+    insulin_current: number;
+
+    cholesterol: number;
+    heart_attack: boolean;
+    EF: number;
+
+    macro_album: number;
+    creatinine: number;
+    blood_pressure: number;
+    eGFR: number;
+
+
+
+
+
+
+
+
 
     // a1cchange: Subject<string> = new Subject<number>();
 
