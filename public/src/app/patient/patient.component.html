@@ -12,6 +12,7 @@
             <span *ngIf="this.sharedBin.have_symptoms === true">Yes</span>
             <span *ngIf="this.sharedBin.have_symptoms === false">No</span>
         </h6>
+        <h6>Weight: {{this.sharedBin.weight_kg}} kg, {{this.sharedBin.weight_lb}} lb</h6>
     </div>
 
     <div *ngIf="open == true" class="cardback">
@@ -44,6 +45,25 @@
             </label>
             <span *ngIf="this.sharedBin.have_symptoms === true">Yes</span>
             <span *ngIf="this.sharedBin.have_symptoms === false">No</span>
+        </div>
+
+        <div class="choice_box">
+            <p>Weight: </p>
+            <br>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kg:</p>
+            <input name="this.sharedBin.weight_kg" [(ngModel)]="this.sharedBin.weight_kg" class="form-control centered" placeholder="---">
+            <div class="slider_container">
+                <input name="this.sharedBin.weight_kg" [(ngModel)]="this.sharedBin.weight_kg" 
+                type="range" min="5" max="500" value="50" class="slider" step="1">
+            </div>
+
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lb:</p>
+            <input name="this.sharedBin.weight_lb" [(ngModel)]="this.sharedBin.weight_lb" class="form-control centered" placeholder="---">
+            <div class="slider_container">
+                <input name="this.sharedBin.weight_lb" [(ngModel)]="this.sharedBin.weight_lb" 
+                type="range" min="5" max="400" value="50" class="slider" step="1">
+            </div>
+
         </div>
 
     

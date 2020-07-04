@@ -11,7 +11,6 @@ input {
 
 .choice_box p {
     display: inline-block;
-    margin-right: 5px;
 }
 
 .centered {
@@ -26,6 +25,8 @@ input {
 
 .switch_container {
     position: relative;
+    top: 1px;
+    margin: 0px 5px;
     display: inline-block;
     width: 40px;
     height: 24px;
@@ -38,7 +39,7 @@ input {
     height: 0;
   }
   
-  /* The slider */
+  /* The switch */
   .switch {
     position: absolute;
     cursor: pointer;
