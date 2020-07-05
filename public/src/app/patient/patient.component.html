@@ -2,6 +2,8 @@
 
     <header (click)="OnClick()">Patient Info</header>
 
+    <!----------------------------->
+
     <div *ngIf="open == false" class="cardback">
         <h6>A1C: {{this.sharedBin.a1c}}%</h6>
         <h6>Newly Diagnosed: 
@@ -13,10 +15,24 @@
             <span *ngIf="this.sharedBin.have_symptoms === false">No</span>
         </h6>
         <h6>Weight: {{this.sharedBin.weight_kg}} kg, {{this.sharedBin.weight_lb}} lb</h6>
+        <h6>Current Insulin: {{this.sharedBin.insulin_current}}</h6>
+        <h6>Cholesterol: {{this.sharedBin.cholesterol}}</h6>
+        <h6>Past Heart Attack: 
+            <span *ngIf="this.sharedBin.heart_attack === true">Yes</span>
+            <span *ngIf="this.sharedBin.heart_attack === false">No</span>
+        </h6>
+        <h6>EF: {{this.sharedBin.EF}}</h6>
+        <h6>Microalbuminuria: {{this.sharedBin.micro_album}}</h6>
+        <h6>Creatinine: {{this.sharedBin.creatinine}}</h6>
+        <h6>Blood Pressure: {{this.sharedBin.blood_pressure_syst}}/{{this.sharedBin.blood_pressure_dias}}</h6>
+        <h6>eGFR: {{this.sharedBin.eGFR}}</h6>
     </div>
+
+    <!----------------------------->
 
     <div *ngIf="open == true" class="cardback">
 
+        <!--A1C-->
         <div class="choice_box">
             <p>A1C%: </p>
             <input name="this.sharedBin.a1c" [(ngModel)]="this.sharedBin.a1c" class="form-control centered" placeholder="---">
@@ -27,6 +43,7 @@
             </div>
         </div>
 
+        <!--New Patient-->
         <div class="choice_box">
             <p>New Patient: </p>
             <label class="switch_container">
@@ -37,6 +54,7 @@
             <span *ngIf="this.sharedBin.newly_diagnosed === false">No</span>
         </div>
 
+        <!--Symptoms-->
         <div class="choice_box">
             <p>Showing Symptoms: </p>
             <label class="switch_container">
@@ -47,6 +65,7 @@
             <span *ngIf="this.sharedBin.have_symptoms === false">No</span>
         </div>
 
+        <!--Weight-->
         <div class="choice_box">
             <p>Weight: </p>
             <br>
@@ -56,14 +75,109 @@
                 <input name="this.sharedBin.weight_kg" [(ngModel)]="this.sharedBin.weight_kg" 
                 type="range" min="5" max="500" value="50" class="slider" step="1">
             </div>
-
+            <br>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lb:</p>
             <input name="this.sharedBin.weight_lb" [(ngModel)]="this.sharedBin.weight_lb" class="form-control centered" placeholder="---">
             <div class="slider_container">
                 <input name="this.sharedBin.weight_lb" [(ngModel)]="this.sharedBin.weight_lb" 
                 type="range" min="5" max="400" value="50" class="slider" step="1">
             </div>
+        </div>
 
+        <!--Insulin-->
+        <div class="choice_box">
+            <p>Current Insulin: </p>
+            <input name="this.sharedBin.insulin_current" [(ngModel)]="this.sharedBin.insulin_current" class="form-control centered" placeholder="---">
+    
+            <div class="slider_container">
+                <input name="this.sharedBin.insulin_current" [(ngModel)]="this.sharedBin.insulin_current" 
+                type="range" min="5" max="12" value="50" class="slider" step="0.1">
+            </div>
+        </div>
+
+        <!--Cholesterol-->
+        <div class="choice_box">
+            <p>Cholesterol: </p>
+            <input name="this.sharedBin.cholesterol" [(ngModel)]="this.sharedBin.cholesterol" class="form-control centered" placeholder="---">
+    
+            <div class="slider_container">
+                <input name="this.sharedBin.cholesterol" [(ngModel)]="this.sharedBin.cholesterol" 
+                type="range" min="5" max="12" value="50" class="slider" step="0.1">
+            </div>
+        </div>
+
+        <!--Heart Attack-->
+        <div class="choice_box">
+            <p>Past Heart Attack: </p>
+            <label class="switch_container">
+                <input type="checkbox" [(ngModel)]="this.sharedBin.heart_attack" class="form-control">
+                <span class="switch round"></span>
+            </label>
+            <span *ngIf="this.sharedBin.heart_attack === true">Yes</span>
+            <span *ngIf="this.sharedBin.heart_attack === false">No</span>
+        </div>
+
+        <!--EF-->
+        <div class="choice_box">
+            <p>EF: </p>
+            <input name="this.sharedBin.EF" [(ngModel)]="this.sharedBin.EF" class="form-control centered" placeholder="---">
+    
+            <div class="slider_container">
+                <input name="this.sharedBin.EF" [(ngModel)]="this.sharedBin.EF" 
+                type="range" min="5" max="12" value="50" class="slider" step="0.1">
+            </div>
+        </div>
+
+        <!--Micro Album-->
+        <div class="choice_box">
+            <p>Microalbuminuria: </p>
+            <input name="this.sharedBin.micro_album" [(ngModel)]="this.sharedBin.micro_album" class="form-control centered" placeholder="---">
+    
+            <div class="slider_container">
+                <input name="this.sharedBin.micro_album" [(ngModel)]="this.sharedBin.micro_album" 
+                type="range" min="5" max="12" value="50" class="slider" step="0.1">
+            </div>
+        </div>
+
+        <!--Creatinine-->
+        <div class="choice_box">
+            <p>Creatinine: </p>
+            <input name="this.sharedBin.creatinine" [(ngModel)]="this.sharedBin.creatinine" class="form-control centered" placeholder="---">
+    
+            <div class="slider_container">
+                <input name="this.sharedBin.creatinine" [(ngModel)]="this.sharedBin.creatinine" 
+                type="range" min="5" max="12" value="50" class="slider" step="0.1">
+            </div>
+        </div>
+
+        <!--Blood Pressure-->
+        <div class="choice_box">
+            <p>Blood Pressure: {{this.sharedBin.blood_pressure_syst}}/{{this.sharedBin.blood_pressure_dias}}</p>
+            <br>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Systolic:</p>
+            <input name="this.sharedBin.blood_pressure_syst" [(ngModel)]="this.sharedBin.blood_pressure_syst" class="form-control centered" placeholder="---">
+            <div class="slider_container">
+                <input name="this.sharedBin.blood_pressure_syst" [(ngModel)]="this.sharedBin.blood_pressure_syst" 
+                type="range" min="90" max="250" value="50" class="slider" step="10">
+            </div>
+            <br>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Diastolic:</p>
+            <input name="this.sharedBin.blood_pressure_dias" [(ngModel)]="this.sharedBin.blood_pressure_dias" class="form-control centered" placeholder="---">
+            <div class="slider_container">
+                <input name="this.sharedBin.blood_pressure_dias" [(ngModel)]="this.sharedBin.blood_pressure_dias" 
+                type="range" min="60" max="140" value="50" class="slider" step="1">
+            </div>
+        </div>
+
+        <!--eGFR-->
+        <div class="choice_box">
+            <p>eGFR: </p>
+            <input name="this.sharedBin.eGFR" [(ngModel)]="this.sharedBin.eGFR" class="form-control centered" placeholder="---">
+    
+            <div class="slider_container">
+                <input name="this.sharedBin.eGFR" [(ngModel)]="this.sharedBin.eGFR" 
+                type="range" min="5" max="12" value="50" class="slider" step="0.1">
+            </div>
         </div>
 
     

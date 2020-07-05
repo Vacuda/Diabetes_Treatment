@@ -18,12 +18,13 @@ export class SharedBinService {
     insulin_current: number;
 
     cholesterol: number;
-    heart_attack: boolean;
+    heart_attack: boolean = false;
     EF: number;
 
-    macro_album: number;
+    micro_album: number;
     creatinine: number;
-    blood_pressure: number;
+    blood_pressure_syst: number = 120;
+    blood_pressure_dias: number = 80;
     eGFR: number;
 
 

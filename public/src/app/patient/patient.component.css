@@ -16,7 +16,7 @@ input {
 .centered {
     text-align: center;
     display: inline-block;
-    width: 100px;
+    width: 60px;
     height: 30px;
 }
 
@@ -93,10 +93,10 @@ input {
 /* ----------SLIDER-------------*/
 
 .slider_container {
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
     display: inline-block;
-    width: 60%;
+    width: 40%;
 }
 
 .slider {
@@ -119,8 +119,8 @@ input {
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none; /* Override default look */
     appearance: none;
-    width: 15px; /* Set a specific slider handle width */
-    height: 30px; /* Slider handle height */
+    width: 13px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
     background: gray; /* Green background */
     cursor: pointer; /* Cursor on hover */
     border-radius: 10px;
