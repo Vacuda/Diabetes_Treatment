@@ -1,16 +1,53 @@
-h3, h5{
-    margin: 0px auto;
-    width: 75%;
-    display: block;
+
+.patient_row {
+    width: 100%;
+}
+
+.patient_col_a {
+    width: 40%;
+    padding: 3px 0px;
+    display: inline-block;
     text-align: center;
 }
 
+.patient_col_a p {
+    margin-bottom: 0px;
+}
+
+.patient_col_b {
+    width: 20%;
+    display: inline-block;
+}
+
+.patient_col_c {
+    width: 40%;
+    display: inline-block;
+    /* outline: 1px dashed purple; */
+}
+
 input {
-    margin: 10px 0px;
+    margin: 0px auto;
+    display: block;
+    text-align: center;
+    width: 60%;
+    height: 30px;
+}
+
+.sub_offset {
+    text-align: right;
+}
+
+
+
+/* input, .move_switch {
+    position: absolute;
+    left: 40%;
+    outline: 1px dashed purple;
 }
 
 .choice_box p {
     display: inline-block;
+    position: relative;
 }
 
 .centered {
@@ -20,13 +57,18 @@ input {
     height: 30px;
 }
 
+.move_yesno {
+    position: absolute;
+    left: 50%;
+} */
+
 
 /* ----------SWITCH-------------*/
 
 .switch_container {
     position: relative;
     top: 1px;
-    margin: 0px 5px;
+    margin: 0px 10px;
     display: inline-block;
     width: 40px;
     height: 24px;
@@ -93,10 +135,8 @@ input {
 /* ----------SLIDER-------------*/
 
 .slider_container {
-    padding-left: 5%;
-    padding-right: 5%;
     display: inline-block;
-    width: 40%;
+    width: 100%;
 }
 
 .slider {

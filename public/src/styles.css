@@ -1,4 +1,23 @@
 
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    vertical-align: top;
+    /* outline: 1px dotted red; */
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+.container {
+    width: 100%;
+    min-height: 800px;
+    margin: 0px auto;
+    padding: 2%;
+    font-size: 15px;
+    background-color: rgb(160, 163, 154);
+}
+
 /* ------------------------------*/
 
 .therapy_container {
@@ -9,15 +28,22 @@
     /* outline: 1px dashed blue; */
 }
 
-h6, p {
+.patient_container {
+    margin: 0px auto;
+    display: block;
+    padding: 5px;
+    width: 100%;
+    position: relative;
+}
+
+.container div {
     text-align: center;
-    text-underline-offset: 2px;
 }
 
 header {
     background-color: grey;
-    border: 1 px solid black;
     text-align: center;
+    position: relative;
 }
 
 .division {
@@ -29,7 +55,13 @@ header {
 .cardback {
     margin-top: 5px;
     background-color: lightgray;
-    padding: 5px;
+    padding: 10px;
+}
+
+.triangle {
+    position: absolute;
+    right: 5px;
+    top: -1px;
 }
 
 .infoback {

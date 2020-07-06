@@ -1,6 +1,10 @@
 <div [ngClass]="{'active':this.sharedBin.active === 'triple'}" 
     class="therapy_container">
-    <header (click)="OnClick()">Triple Therapy</header>
+
+    <header (click)="OnClick()">
+        <span>Triple Therapy</span>
+        <span class="triangle">&#9660;</span>
+    </header>
 
     <div *ngIf="open === true" class="cardback">
 

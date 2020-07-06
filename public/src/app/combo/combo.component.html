@@ -1,7 +1,10 @@
 <div [ngClass]="{'active':this.sharedBin.active === 'combo'}" 
-    class="therapy_container"
-    (click)="OnClick()">
-    <header>Combination Injection Therapy</header>
+    class="therapy_container">
+
+    <header (click)="OnClick()">
+        <span>Combination Injection Therapy</span>
+        <span class="triangle">&#9660;</span>
+    </header>
 
     <div *ngIf="open === true" class="cardback">
 

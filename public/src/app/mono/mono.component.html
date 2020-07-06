@@ -1,6 +1,9 @@
 <div [ngClass]="{'active':active === true}" 
     class="therapy_container">
-    <header (click)="OnClick()">Mono Therapy</header>
+    <header (click)="OnClick()">
+        <span>Mono Therapy</span>
+        <span class="triangle">&#9660;</span>
+    </header>
 
     <div *ngIf="open === true" class="cardback">
 
