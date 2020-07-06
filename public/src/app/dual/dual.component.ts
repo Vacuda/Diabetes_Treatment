@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { SharedBinService } from '../shared-bin.service';
 
 @Component({
@@ -7,6 +7,8 @@ import { SharedBinService } from '../shared-bin.service';
     styleUrls: ['./dual.component.css']
 })
 export class DualComponent implements OnInit {
+
+    @Input() diagnosis:any;
 
     active: boolean = false;
     open: boolean = false;
@@ -18,12 +20,12 @@ export class DualComponent implements OnInit {
     }
 
     ngOnChanges() {
-        // if (this.a1c >= 9 && this.a1c < 10){
-        // this.active = true;
-        // }
-        // else{
-        // this.active = false;
-        // }
+        if(this.diagnosis.active_therapy == "dual"){
+            this.active = true;
+        }
+        else{
+            this.active = false;
+        }
     }
 
     //open - close

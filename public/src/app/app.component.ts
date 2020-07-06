@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { SharedBinService } from './shared-bin.service';
 
 @Component({
@@ -11,11 +11,10 @@ export class AppComponent implements OnInit {
     constructor(private sharedBin: SharedBinService){}
 
     ngOnInit(){
-        // this.sharedBin.set_example("mage");
+        console.log("Console starts here");
     }
     
     ngOnChanges(){
-        // console.log("hhehe");
         // if (this.sharedBin.a1c >= 9 && this.sharedBin.a1c < 10){
         //     console.log("hyoyoyoyoyo");
         //     this.sharedBin.active = "triple";

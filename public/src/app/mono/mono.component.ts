@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { SharedBinService } from '../shared-bin.service';
 
 @Component({
@@ -8,23 +8,24 @@ import { SharedBinService } from '../shared-bin.service';
 })
 export class MonoComponent implements OnInit {
 
-    active:boolean;
-
+    @Input() diagnosis:any;
+    
+    active: boolean = false;
     open: boolean = false;
 
     constructor( private sharedBin: SharedBinService ) { }
 
     ngOnInit() {
-        this.active = true;
+        
     }
 
     ngOnChanges() {
-        // if (this.a1c >= 7 && this.a1c < 9){
-        // this.active = true;
-        // }
-        // else{
-        // this.active = false;
-        // }
+        if(this.diagnosis.active_therapy == "mono"){
+            this.active = true;
+        }
+        else{
+            this.active = false;
+        }
     }
 
     //open - close

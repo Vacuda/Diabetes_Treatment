@@ -32,7 +32,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n<div class=\"container\">\n    <div>~~~~~</div>\n    <app-patient></app-patient>\n    <div>~~~~~</div>\n    <app-mono></app-mono>\n    <app-dual></app-dual>\n    <app-triple></app-triple>\n    <app-combo></app-combo>\n\n    <h4>--{{this.sharedBin.active}}--</h4>\n    <h4>-{{this.sharedBin.a1c}}-</h4>\n    <!-- <router-outlet></router-outlet> -->\n\n</div>\n\n\n<!-- \n\n    <button [routerLink]=\"['/alpha']\">Load Alpha</button>\n    <a [routerLink] = \"['details', 5]\"> Go to /products/details/5 </a> \n\n\n    <div *ngIf=\"errors\">\n        <h4>Errors:</h4>\n        <ul>\n            <div *ngFor=\"let item of errors\">\n                <li class=\"errors\">{{item.message}}</li>\n            </div>\n        </ul>\n\n    </div>\n\n\n\n\n    <div *ngIf=\"createtask\">\n        <form (submit)=\"createTask()\">\n            <div class=\"form-group\">\n                <label for=\"title\">Task Name:</label>\n                <input name=\"createtask.title\" [(ngModel)]=\"createtask.title\" class=\"form-control\" id=\"title\" placeholder=\"---\">\n            </div>\n            <div class=\"form-group\">\n                <label for=\"description\">Description:</label>\n                <textarea name=\"createtask.description\" [(ngModel)]=\"createtask.description\" class=\"form-control\" id=\"description\" rows=\"3\" placeholder=\"---\"></textarea>\n            </div>\n\n            <button class=\"btn btn-warning\" type=\"submit\">Create</button>\n        </form>\n    </div>\n\n    <div *ngIf=\"updatetask\">\n        <form (submit)=\"updateTask(onetask._id)\">\n            <div class=\"form-group\">\n                <label for=\"title\">Task Name:</label>\n                <input name=\"updatetask.title\" [(ngModel)]=\"updatetask.title\" class=\"form-control\" id=\"title\" value=\"updatetask.title\">\n            </div>\n            <div class=\"form-group\">\n                <label for=\"description\">Description:</label>\n                <textarea name=\"updatetask.description\" [(ngModel)]=\"updatetask.description\" class=\"form-control\" id=\"description\" rows=\"3\" value=\"updatetask.description\"></textarea>\n            </div>\n\n            <button class=\"btn btn-warning\" type=\"submit\">Submit Edits</button>\n        </form>\n    </div>\n\n    <div class=\"division\"></div>\n\n    <button class=\"btn btn-primary\" (click)=\"getTasks()\">Click for Tasks</button>\n\n    <div class=\"division\"></div>\n\n    <div class=\"centered\" *ngFor=\"let task of tasks\">\n\n        <h2><a id=\"clickable\" (click)=\"getOneTask(task._id)\">{{task.title}}</a></h2>\n        <div class=\"division\"></div>\n    </div> -->\n");
+/* harmony default export */ __webpack_exports__["default"] = (" <!-- These values are taken from the Shared Bin Service and inputted into\n    the Doctors Office, a component that houses all of the project. \n    \n    The Inputs are hooked up directly to the Shared Bin Service.  When those\n    values are changed, it will trigger these to change, which will trigger ngOnChanges\n    to trigger within the Doctors Office TS.  The main diagnosis logic, housed with the\n    Doctors Office TS, will make the diagnosis and send the diagnosis down to the\n    components that need it.\n\n    Every input change thus changes the diagnosis-->\n\n\n<app-doctors-office \n\n    [newly_diagnosed]=\"this.sharedBin.newly_diagnosed\"\n    [have_symptoms]=\"this.sharedBin.have_symptoms\"\n\n    [a1c]=\"this.sharedBin.a1c\"\n    [weight_lb]=\"this.sharedBin.weight_lb\"\n    [weight_kg]=\"this.sharedBin.weight_kg\"\n    [insulin_current]=\"this.sharedBin.insulin_current\"\n\n    [cholesterol]=\"this.sharedBin.cholesterol\"\n    [heart_attack]=\"this.sharedBin.heart_attack\"\n    [EF]=\"this.sharedBin.EF\"\n\n    [micro_album]=\"this.sharedBin.micro_album\"\n    [creatinine]=\"this.sharedBin.creatinine\"\n    [blood_pressure_syst]=\"this.sharedBin.blood_pressure_syst\"\n    [blood_pressure_dias]=\"this.sharedBin.blood_pressure_dias\"\n    [eGFR]=\"this.sharedBin.eGFR\">\n\n</app-doctors-office>\n\n");
 
 /***/ }),
 
@@ -49,6 +49,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/doctors-office/doctors-office.component.html":
+/*!****************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/doctors-office/doctors-office.component.html ***!
+  \****************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container\">\n    <div>~~~~~</div>\n    <app-patient></app-patient>\n    <div>~~~~~</div>\n    <app-mono [diagnosis]=\"diagnosis\"></app-mono>\n    <app-dual [diagnosis]=\"diagnosis\"></app-dual>\n    <app-triple [diagnosis]=\"diagnosis\"></app-triple>\n    <app-combo [diagnosis]=\"diagnosis\"></app-combo>\n\n    <h4>--{{diagnosis.active_therapy}}--</h4>\n    <h4>-{{this.sharedBin.a1c}}-</h4>\n    <!-- <router-outlet></router-outlet> -->\n\n</div>");
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/dual/dual.component.html":
 /*!********************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/dual/dual.component.html ***!
@@ -58,7 +71,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div [ngClass]=\"{'active':this.sharedBin.active === 'dual'}\" \n    class=\"therapy_container\">\n\n    <header (click)=\"OnClick()\">\n        <span>Dual Therapy</span>\n        <span class=\"triangle\">&#9660;</span>\n    </header>\n\n    <div *ngIf=\"open === true\" class=\"cardback\">\n        \n        <app-lifestyle></app-lifestyle>\n        <app-metformin></app-metformin>\n        <h6>Additional Agent</h6>\n        <div class=\"division\">~~~~</div>\n\n    </div>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div [ngClass]=\"{'active':active === true}\" \n    class=\"therapy_container\">\n\n    <header (click)=\"OnClick()\">\n        <span>Dual Therapy</span>\n        <span class=\"triangle\">&#9660;</span>\n    </header>\n\n    <div *ngIf=\"open === true\" class=\"cardback\">\n        \n        <app-lifestyle></app-lifestyle>\n        <app-metformin></app-metformin>\n        <h6>Additional Agent</h6>\n        <div class=\"division\">~~~~</div>\n\n    </div>\n</div>");
 
 /***/ }),
 
@@ -97,7 +110,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div [ngClass]=\"{'active':active === true}\" \n    class=\"therapy_container\">\n    <header (click)=\"OnClick()\">\n        <span>Mono Therapy</span>\n        <span class=\"triangle\">&#9660;</span>\n    </header>\n\n    <div *ngIf=\"open === true\" class=\"cardback\">\n\n        <app-lifestyle [active] = \"active\"></app-lifestyle>\n        <app-metformin [active] = \"active\"></app-metformin> \n        <div class=\"division\">~~~~</div>\n\n        <p>Initiate metformin therapy if no contradictions</p>\n        \n    </div>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div [ngClass]=\"{'active':active === true}\" \n    class=\"therapy_container\">\n    <header (click)=\"OnClick()\">\n        <span>Mono Therapy</span>\n        <span class=\"triangle\">&#9660;</span>\n    </header>\n\n    <div *ngIf=\"open === true\" class=\"cardback\">\n\n        <app-lifestyle [active] = \"active\"></app-lifestyle>\n        <app-metformin [active] = \"active\"></app-metformin> \n        <div class=\"division\">~~~~</div>\n        <p>{{this.sharedBin.a1c}}</p>\n        <p>Initiate metformin therapy if no contradictions</p>\n        \n    </div>\n</div>");
 
 /***/ }),
 
@@ -123,7 +136,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div [ngClass]=\"{'active':this.sharedBin.active === 'triple'}\" \n    class=\"therapy_container\">\n\n    <header (click)=\"OnClick()\">\n        <span>Triple Therapy</span>\n        <span class=\"triangle\">&#9660;</span>\n    </header>\n\n    <div *ngIf=\"open === true\" class=\"cardback\">\n\n        <app-lifestyle></app-lifestyle>\n        <app-metformin></app-metformin>\n        <h6>First Agent</h6>\n        <h6>Second Agent</h6>\n        <div class=\"division\">~~~~</div>\n\n    </div>\n</div>\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div [ngClass]=\"{'active':active === true}\" \n    class=\"therapy_container\">\n\n    <header (click)=\"OnClick()\">\n        <span>Triple Therapy</span>\n        <span class=\"triangle\">&#9660;</span>\n    </header>\n\n    <div *ngIf=\"open === true\" class=\"cardback\">\n\n        <app-lifestyle></app-lifestyle>\n        <app-metformin></app-metformin>\n        <h6>First Agent</h6>\n        <h6>Second Agent</h6>\n        <div class=\"division\">~~~~</div>\n\n    </div>\n</div>\n\n");
 
 /***/ }),
 
@@ -462,10 +475,9 @@ let AppComponent = class AppComponent {
         this.sharedBin = sharedBin;
     }
     ngOnInit() {
-        // this.sharedBin.set_example("mage");
+        console.log("Console starts here");
     }
     ngOnChanges() {
-        // console.log("hhehe");
         // if (this.sharedBin.a1c >= 9 && this.sharedBin.a1c < 10){
         //     console.log("hyoyoyoyoyo");
         //     this.sharedBin.active = "triple";
@@ -614,6 +626,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _lifestyle_lifestyle_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./lifestyle/lifestyle.component */ "./src/app/lifestyle/lifestyle.component.ts");
 /* harmony import */ var _patient_patient_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./patient/patient.component */ "./src/app/patient/patient.component.ts");
 /* harmony import */ var _shared_bin_service__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./shared-bin.service */ "./src/app/shared-bin.service.ts");
+/* harmony import */ var _doctors_office_doctors_office_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./doctors-office/doctors-office.component */ "./src/app/doctors-office/doctors-office.component.ts");
+
 
 
 
@@ -642,6 +656,7 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _metformin_metformin_component__WEBPACK_IMPORTED_MODULE_11__["MetforminComponent"],
             _lifestyle_lifestyle_component__WEBPACK_IMPORTED_MODULE_12__["LifestyleComponent"],
             _patient_patient_component__WEBPACK_IMPORTED_MODULE_13__["PatientComponent"],
+            _doctors_office_doctors_office_component__WEBPACK_IMPORTED_MODULE_15__["DoctorsOfficeComponent"],
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -696,12 +711,12 @@ let ComboComponent = class ComboComponent {
     ngOnInit() {
     }
     ngOnChanges() {
-        // if (this.a1c >= 10){
-        // this.active = true;
-        // }
-        // else{
-        // this.active = false;
-        // }
+        if (this.diagnosis.active_therapy == "combo") {
+            this.active = true;
+        }
+        else {
+            this.active = false;
+        }
     }
     //open - close
     OnClick() {
@@ -716,6 +731,9 @@ let ComboComponent = class ComboComponent {
 ComboComponent.ctorParameters = () => [
     { type: _shared_bin_service__WEBPACK_IMPORTED_MODULE_2__["SharedBinService"] }
 ];
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], ComboComponent.prototype, "diagnosis", void 0);
 ComboComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-combo',
@@ -723,6 +741,122 @@ ComboComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./combo.component.css */ "./src/app/combo/combo.component.css")).default]
     })
 ], ComboComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/doctors-office/doctors-office.component.css":
+/*!*************************************************************!*\
+  !*** ./src/app/doctors-office/doctors-office.component.css ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2RvY3RvcnMtb2ZmaWNlL2RvY3RvcnMtb2ZmaWNlLmNvbXBvbmVudC5jc3MifQ== */");
+
+/***/ }),
+
+/***/ "./src/app/doctors-office/doctors-office.component.ts":
+/*!************************************************************!*\
+  !*** ./src/app/doctors-office/doctors-office.component.ts ***!
+  \************************************************************/
+/*! exports provided: DoctorsOfficeComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DoctorsOfficeComponent", function() { return DoctorsOfficeComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _shared_bin_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../shared-bin.service */ "./src/app/shared-bin.service.ts");
+// All Diagnosis Logic //
+// Diagnosis is sent down to the components from here //
+
+
+
+let DoctorsOfficeComponent = class DoctorsOfficeComponent {
+    constructor(sharedBin) {
+        this.sharedBin = sharedBin;
+        this.diagnosis = {
+            active_therapy: ""
+        };
+    }
+    ngOnInit() {
+        this.main_Diagnosis_Logic();
+    }
+    ngOnChanges() {
+        this.main_Diagnosis_Logic();
+    }
+    main_Diagnosis_Logic() {
+        if (this.a1c > 7 && this.a1c < 9) {
+            this.diagnosis = { active_therapy: "mono" };
+        }
+        else if (this.a1c >= 9 && this.a1c < 10) {
+            this.diagnosis = { active_therapy: "dual" };
+        }
+        else if (this.a1c >= 10) {
+            this.diagnosis = { active_therapy: "triple" };
+        }
+        else {
+            this.diagnosis = { active_therapy: "none" };
+        }
+    }
+};
+DoctorsOfficeComponent.ctorParameters = () => [
+    { type: _shared_bin_service__WEBPACK_IMPORTED_MODULE_2__["SharedBinService"] }
+];
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], DoctorsOfficeComponent.prototype, "newly_diagnosed", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], DoctorsOfficeComponent.prototype, "have_symptoms", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], DoctorsOfficeComponent.prototype, "a1c", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], DoctorsOfficeComponent.prototype, "weight_lb", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], DoctorsOfficeComponent.prototype, "weight_kg", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], DoctorsOfficeComponent.prototype, "insulin_current", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], DoctorsOfficeComponent.prototype, "cholesterol", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], DoctorsOfficeComponent.prototype, "heart_attack", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], DoctorsOfficeComponent.prototype, "EF", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], DoctorsOfficeComponent.prototype, "micro_album", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], DoctorsOfficeComponent.prototype, "creatinine", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], DoctorsOfficeComponent.prototype, "blood_pressure_syst", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], DoctorsOfficeComponent.prototype, "blood_pressure_dias", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], DoctorsOfficeComponent.prototype, "eGFR", void 0);
+DoctorsOfficeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-doctors-office',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./doctors-office.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/doctors-office/doctors-office.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./doctors-office.component.css */ "./src/app/doctors-office/doctors-office.component.css")).default]
+    })
+], DoctorsOfficeComponent);
 
 
 
@@ -766,12 +900,12 @@ let DualComponent = class DualComponent {
     ngOnInit() {
     }
     ngOnChanges() {
-        // if (this.a1c >= 9 && this.a1c < 10){
-        // this.active = true;
-        // }
-        // else{
-        // this.active = false;
-        // }
+        if (this.diagnosis.active_therapy == "dual") {
+            this.active = true;
+        }
+        else {
+            this.active = false;
+        }
     }
     //open - close
     OnClick() {
@@ -786,6 +920,9 @@ let DualComponent = class DualComponent {
 DualComponent.ctorParameters = () => [
     { type: _shared_bin_service__WEBPACK_IMPORTED_MODULE_2__["SharedBinService"] }
 ];
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], DualComponent.prototype, "diagnosis", void 0);
 DualComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-dual',
@@ -962,18 +1099,18 @@ __webpack_require__.r(__webpack_exports__);
 let MonoComponent = class MonoComponent {
     constructor(sharedBin) {
         this.sharedBin = sharedBin;
+        this.active = false;
         this.open = false;
     }
     ngOnInit() {
-        this.active = true;
     }
     ngOnChanges() {
-        // if (this.a1c >= 7 && this.a1c < 9){
-        // this.active = true;
-        // }
-        // else{
-        // this.active = false;
-        // }
+        if (this.diagnosis.active_therapy == "mono") {
+            this.active = true;
+        }
+        else {
+            this.active = false;
+        }
     }
     //open - close
     OnClick() {
@@ -988,6 +1125,9 @@ let MonoComponent = class MonoComponent {
 MonoComponent.ctorParameters = () => [
     { type: _shared_bin_service__WEBPACK_IMPORTED_MODULE_2__["SharedBinService"] }
 ];
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], MonoComponent.prototype, "diagnosis", void 0);
 MonoComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-mono',
@@ -1078,9 +1218,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let SharedBinService = class SharedBinService {
-    // a1cchange: Subject<string> = new Subject<number>();
     constructor() {
-        this.active = "mono";
         this.newly_diagnosed = true;
         this.have_symptoms = false;
         this.a1c = 7.0;
@@ -1137,12 +1275,12 @@ let TripleComponent = class TripleComponent {
     ngOnInit() {
     }
     ngOnChanges() {
-        // if (this.a1c >= 9 && this.a1c < 10){
-        // this.active = true;
-        // }
-        // else{
-        // this.active = false;
-        // }
+        if (this.diagnosis.active_therapy == "triple") {
+            this.active = true;
+        }
+        else {
+            this.active = false;
+        }
     }
     //open - close
     OnClick() {
@@ -1157,6 +1295,9 @@ let TripleComponent = class TripleComponent {
 TripleComponent.ctorParameters = () => [
     { type: _shared_bin_service__WEBPACK_IMPORTED_MODULE_2__["SharedBinService"] }
 ];
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], TripleComponent.prototype, "diagnosis", void 0);
 TripleComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-triple',

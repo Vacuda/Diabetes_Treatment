@@ -14,6 +14,7 @@ import { MetforminComponent } from './metformin/metformin.component';
 import { LifestyleComponent } from './lifestyle/lifestyle.component';
 import { PatientComponent } from './patient/patient.component';
 import { SharedBinService } from './shared-bin.service';
+import { DoctorsOfficeComponent } from './doctors-office/doctors-office.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { SharedBinService } from './shared-bin.service';
     MetforminComponent,
     LifestyleComponent,
     PatientComponent,
+    DoctorsOfficeComponent,
   ],
   imports: [
     BrowserModule,

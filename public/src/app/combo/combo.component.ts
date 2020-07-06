@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { SharedBinService } from '../shared-bin.service';
 
 @Component({
@@ -8,6 +8,8 @@ import { SharedBinService } from '../shared-bin.service';
 })
 export class ComboComponent implements OnInit {
 
+    @Input() diagnosis:any;
+    
     active: boolean = false;
     open: boolean = false;
 
@@ -18,12 +20,12 @@ export class ComboComponent implements OnInit {
     }
 
     ngOnChanges() {
-        // if (this.a1c >= 10){
-        // this.active = true;
-        // }
-        // else{
-        // this.active = false;
-        // }
+        if(this.diagnosis.active_therapy == "combo"){
+            this.active = true;
+        }
+        else{
+            this.active = false;
+        }
     }
 
     //open - close

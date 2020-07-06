@@ -1,77 +1,34 @@
+ <!-- These values are taken from the Shared Bin Service and inputted into
+    the Doctors Office, a component that houses all of the project. 
+    
+    The Inputs are hooked up directly to the Shared Bin Service.  When those
+    values are changed, it will trigger these to change, which will trigger ngOnChanges
+    to trigger within the Doctors Office TS.  The main diagnosis logic, housed with the
+    Doctors Office TS, will make the diagnosis and send the diagnosis down to the
+    components that need it.
 
-<div class="container">
-    <div>~~~~~</div>
-    <app-patient></app-patient>
-    <div>~~~~~</div>
-    <app-mono></app-mono>
-    <app-dual></app-dual>
-    <app-triple></app-triple>
-    <app-combo></app-combo>
-
-    <h4>--{{this.sharedBin.active}}--</h4>
-    <h4>-{{this.sharedBin.a1c}}-</h4>
-    <!-- <router-outlet></router-outlet> -->
-
-</div>
+    Every input change thus changes the diagnosis-->
 
 
-<!-- 
+<app-doctors-office 
 
-    <button [routerLink]="['/alpha']">Load Alpha</button>
-    <a [routerLink] = "['details', 5]"> Go to /products/details/5 </a> 
+    [newly_diagnosed]="this.sharedBin.newly_diagnosed"
+    [have_symptoms]="this.sharedBin.have_symptoms"
 
+    [a1c]="this.sharedBin.a1c"
+    [weight_lb]="this.sharedBin.weight_lb"
+    [weight_kg]="this.sharedBin.weight_kg"
+    [insulin_current]="this.sharedBin.insulin_current"
 
-    <div *ngIf="errors">
-        <h4>Errors:</h4>
-        <ul>
-            <div *ngFor="let item of errors">
-                <li class="errors">{{item.message}}</li>
-            </div>
-        </ul>
+    [cholesterol]="this.sharedBin.cholesterol"
+    [heart_attack]="this.sharedBin.heart_attack"
+    [EF]="this.sharedBin.EF"
 
-    </div>
+    [micro_album]="this.sharedBin.micro_album"
+    [creatinine]="this.sharedBin.creatinine"
+    [blood_pressure_syst]="this.sharedBin.blood_pressure_syst"
+    [blood_pressure_dias]="this.sharedBin.blood_pressure_dias"
+    [eGFR]="this.sharedBin.eGFR">
 
+</app-doctors-office>
 
-
-
-    <div *ngIf="createtask">
-        <form (submit)="createTask()">
-            <div class="form-group">
-                <label for="title">Task Name:</label>
-                <input name="createtask.title" [(ngModel)]="createtask.title" class="form-control" id="title" placeholder="---">
-            </div>
-            <div class="form-group">
-                <label for="description">Description:</label>
-                <textarea name="createtask.description" [(ngModel)]="createtask.description" class="form-control" id="description" rows="3" placeholder="---"></textarea>
-            </div>
-
-            <button class="btn btn-warning" type="submit">Create</button>
-        </form>
-    </div>
-
-    <div *ngIf="updatetask">
-        <form (submit)="updateTask(onetask._id)">
-            <div class="form-group">
-                <label for="title">Task Name:</label>
-                <input name="updatetask.title" [(ngModel)]="updatetask.title" class="form-control" id="title" value="updatetask.title">
-            </div>
-            <div class="form-group">
-                <label for="description">Description:</label>
-                <textarea name="updatetask.description" [(ngModel)]="updatetask.description" class="form-control" id="description" rows="3" value="updatetask.description"></textarea>
-            </div>
-
-            <button class="btn btn-warning" type="submit">Submit Edits</button>
-        </form>
-    </div>
-
-    <div class="division"></div>
-
-    <button class="btn btn-primary" (click)="getTasks()">Click for Tasks</button>
-
-    <div class="division"></div>
-
-    <div class="centered" *ngFor="let task of tasks">
-
-        <h2><a id="clickable" (click)="getOneTask(task._id)">{{task.title}}</a></h2>
-        <div class="division"></div>
-    </div> -->

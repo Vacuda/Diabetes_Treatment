@@ -1,13 +1,9 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SharedBinService {
-
-    
-    active:string = "mono";
 
     newly_diagnosed: boolean = true;
     have_symptoms: boolean = false;
@@ -27,40 +23,6 @@ export class SharedBinService {
     blood_pressure_dias: number = 80;
     eGFR: number;
 
-
-
-
-
-
-
-
-
-    // a1cchange: Subject<string> = new Subject<number>();
-
-
     constructor() {}
-
-    
-
-
-
-
-    // change(){
-    //     this.nameChange.next(this.name)
-    // }
-
-
-
-    // ngOnChanges() {
-    //     console.log("hhehe");
-    //     if (this.a1c >= 9 && this.a1c < 10){
-    //         console.log("hyoyoyoyoyo");
-    //         this.active = "triple";
-    //     }
-    //     else{
-    //         this.active = "";
-    //     }
-    // }
-
 
 }
