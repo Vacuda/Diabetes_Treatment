@@ -1,66 +1,55 @@
 
 .patient_row {
     width: 100%;
+    height: 36px;
 }
 
-.patient_col_a {
-    width: 40%;
-    padding: 3px 0px;
-    display: inline-block;
-    text-align: center;
-}
+    .patient_col_a {
+        width: 40%;
+        height: 36px;
+        padding-top: 6.5px;
+        display: inline-block;
+        text-align: center;
+        /* outline: 1px dashed purple; */
+    }
 
-.patient_col_a p {
-    margin-bottom: 0px;
-}
+        .patient_col_a p {
+            margin-bottom: 0px;
+        }
 
-.patient_col_b {
-    width: 20%;
-    display: inline-block;
-}
+            .sub_offset {
+                text-align: right;
+            }
 
-.patient_col_c {
-    width: 40%;
-    display: inline-block;
-    /* outline: 1px dashed purple; */
-}
+    .patient_col_b {
+        width: 20%;
+        height: 36px;
+        padding: 2.5px 5px;
+        display: inline-block;
+        /* outline: 1px dashed orangered; */
+    }
 
-input {
-    margin: 0px auto;
-    display: block;
-    text-align: center;
-    width: 60%;
-    height: 30px;
-}
+        input {
+            margin: 0px auto;
+            display: block;
+            text-align: center;
+            width: 100%;
+            height: 30px;
+        }
 
-.sub_offset {
-    text-align: right;
-}
+    .patient_col_c {
+        width: 40%;
+        height: 36px;
+        padding: 6.5px 5px;
+        display: inline-block;
+        text-align: left;
+        /* outline: 1px dashed red; */
+    }
 
-
-
-/* input, .move_switch {
-    position: absolute;
-    left: 40%;
-    outline: 1px dashed purple;
-}
-
-.choice_box p {
-    display: inline-block;
-    position: relative;
-}
-
-.centered {
-    text-align: center;
-    display: inline-block;
-    width: 60px;
-    height: 30px;
-}
-
-.move_yesno {
-    position: absolute;
-    left: 50%;
-} */
+        .patient_col_c span {
+            margin-top: 13px;
+            margin-bottom: 0px;
+        }
 
 
 /* ----------SWITCH-------------*/
@@ -68,7 +57,7 @@ input {
 .switch_container {
     position: relative;
     top: 1px;
-    margin: 0px 10px;
+    margin: 2.5px 10px;
     display: inline-block;
     width: 40px;
     height: 24px;
@@ -136,6 +125,7 @@ input {
 
 .slider_container {
     display: inline-block;
+    padding: 3.75px 0px 0px 0px;
     width: 100%;
 }
 
@@ -146,6 +136,7 @@ input {
     height: 15px; /* Specified height */
     background: #ffffff; /* Grey background */
     outline: none; /* Remove outline */
+    border-radius: 2px;
     opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
     -webkit-transition: .2s; /* 0.2 seconds transition on hover */
     transition: opacity .2s;
