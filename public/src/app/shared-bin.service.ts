@@ -9,8 +9,8 @@ export class SharedBinService {
     have_symptoms: boolean = false;
 
     a1c:number = 7.0;
-    weight_lb: number;
-    weight_kg: number;
+    weight_lb: number = 0;
+    weight_kg: number = 0;
     insulin_current: number;
 
     cholesterol: number;

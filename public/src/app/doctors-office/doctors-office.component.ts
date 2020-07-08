@@ -5,7 +5,7 @@
 
 
 
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ChangeDetectorRef } from '@angular/core';
 import { SharedBinService } from '../shared-bin.service';
 
 @Component({
@@ -46,7 +46,8 @@ export class DoctorsOfficeComponent implements OnInit {
         this.main_Diagnosis_Logic();
     }
     
-    ngOnChanges() {
+    ngOnChanges(changes:any) {
+        this.weight_conversion(changes);
         this.main_Diagnosis_Logic();
     }
 
@@ -63,6 +64,26 @@ export class DoctorsOfficeComponent implements OnInit {
         }
         else{
             this.diagnosis = {active_therapy:"none"};
+        }
+    }
+
+    //2.2046226218 lb in 1 kilogram
+    weight_conversion(changes:any){
+        // if kg was changed, change lb
+        if(changes.weight_kg){
+            var converted_to_lb = Math.round(2.2046226218 * changes.weight_kg.currentValue);
+            //checks if needed first.  Infinite loop would happen without
+            if(this.sharedBin.weight_lb != converted_to_lb){
+                this.sharedBin.weight_lb = converted_to_lb;
+            }
+        }
+        // if lb was changed, change kg
+        if(changes.weight_lb){
+            var converted_to_kg = Math.round(changes.weight_lb.currentValue / 2.2046226218);
+            //checks if needed first.  Infinite loop would happen without
+            if(this.sharedBin.weight_kg != converted_to_kg){
+                this.sharedBin.weight_kg = converted_to_kg;
+            }
         }
     }
 

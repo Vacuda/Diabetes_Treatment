@@ -123,7 +123,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"patient_container\">\n\n    <header (click)=\"OnClick()\">\n        <span>Patient Info</span>\n        <span class=\"triangle\">&#9660;</span>\n    </header>\n\n    <!----------------------------->\n\n    <div *ngIf=\"open == false\" class=\"cardback\" (click)=\"OnClick()\">\n        <h6>A1C: {{this.sharedBin.a1c}}%</h6>\n        <h6>Newly Diagnosed: \n            <span *ngIf=\"this.sharedBin.newly_diagnosed === true\">Yes</span>\n            <span *ngIf=\"this.sharedBin.newly_diagnosed === false\">No</span>\n        </h6>\n        <h6>Has Symptoms: \n            <span *ngIf=\"this.sharedBin.have_symptoms === true\">Yes</span>\n            <span *ngIf=\"this.sharedBin.have_symptoms === false\">No</span>\n        </h6>\n        <h6>Weight: {{this.sharedBin.weight_kg}} kg, {{this.sharedBin.weight_lb}} lb</h6>\n        <h6>Current Insulin: {{this.sharedBin.insulin_current}}</h6>\n        <h6>Cholesterol: {{this.sharedBin.cholesterol}}</h6>\n        <h6>Past Heart Attack: \n            <span *ngIf=\"this.sharedBin.heart_attack === true\">Yes</span>\n            <span *ngIf=\"this.sharedBin.heart_attack === false\">No</span>\n        </h6>\n        <h6>EF: {{this.sharedBin.EF}}</h6>\n        <h6>Microalbuminuria: {{this.sharedBin.micro_album}}</h6>\n        <h6>Creatinine: {{this.sharedBin.creatinine}}</h6>\n        <h6>Blood Pressure: {{this.sharedBin.blood_pressure_syst}}/{{this.sharedBin.blood_pressure_dias}}</h6>\n        <h6>eGFR: {{this.sharedBin.eGFR}}</h6>\n    </div>\n\n    <!----------------------------->\n\n    <div *ngIf=\"open == true\" class=\"cardback\">\n\n        <!--A1C-->\n        <div class=\"patient_row\">\n            <div class=\"patient_col_a\">\n                <p>A1C%:</p>\n            </div>\n            <div class=\"patient_col_b\">\n                <input [(ngModel)]=\"this.sharedBin.a1c\" class=\"form-control\" placeholder=\"---\">\n            </div>\n            <div class=\"patient_col_c\">\n                <div class=\"slider_container\">\n                    <input [(ngModel)]=\"this.sharedBin.a1c\" \n                    type=\"range\" min=\"5\" max=\"12\" value=\"50\" class=\"slider\" step=\"0.1\">\n                </div>\n            </div>\n        </div>\n\n        <!--New Patient-->\n        <div class=\"patient_row\">\n            <div class=\"patient_col_a\">\n                <p>New Patient:</p>\n            </div>\n            <div class=\"patient_col_b\">\n                <label class=\"switch_container\">\n                    <input type=\"checkbox\" [(ngModel)]=\"this.sharedBin.newly_diagnosed\" class=\"form-control\">\n                    <span class=\"switch round\"></span>\n                </label>\n            </div>\n            <div class=\"patient_col_c\">\n                <span *ngIf=\"this.sharedBin.newly_diagnosed === true\">Yes</span>\n                <span *ngIf=\"this.sharedBin.newly_diagnosed === false\">No</span>\n            </div>\n        </div>\n\n        <!--Symptoms-->\n        <div class=\"patient_row\">\n            <div class=\"patient_col_a\">\n                <p>Showing Symptoms:</p>\n            </div>\n            <div class=\"patient_col_b\">\n                <label class=\"switch_container\">\n                    <input type=\"checkbox\" [(ngModel)]=\"this.sharedBin.have_symptoms\" class=\"form-control\">\n                    <span class=\"switch round\"></span>\n                </label>\n            </div>\n            <div class=\"patient_col_c\">\n                <span *ngIf=\"this.sharedBin.have_symptoms === true\">Yes</span>\n                <span *ngIf=\"this.sharedBin.have_symptoms === false\">No</span>\n            </div>\n        </div>\n\n        <!--Weight-->\n        <div class=\"patient_row\">\n            <div class=\"patient_col_a\">\n                <p>Weight:</p>\n            </div>\n            <div class=\"patient_col_b\"></div>\n            <div class=\"patient_col_c\"></div>\n        </div>\n\n        <div class=\"patient_row\">\n            <div class=\"patient_col_a\">\n                <p class=\"sub_offset\">-kg:</p>\n            </div>\n            <div class=\"patient_col_b\">\n                <input [(ngModel)]=\"this.sharedBin.weight_kg\" class=\"form-control\" placeholder=\"---\">\n            </div>\n            <div class=\"patient_col_c\">\n                <div class=\"slider_container\">\n                    <input [(ngModel)]=\"this.sharedBin.weight_kg\" \n                    type=\"range\" min=\"5\" max=\"12\" value=\"50\" class=\"slider\" step=\"0.1\">\n                </div>\n            </div>\n        </div>\n\n        <div class=\"patient_row\">\n            <div class=\"patient_col_a\">\n                <p class=\"sub_offset\">-lb:</p>\n            </div>\n            <div class=\"patient_col_b\">\n                <input [(ngModel)]=\"this.sharedBin.weight_lb\" class=\"form-control\" placeholder=\"---\">\n            </div>\n            <div class=\"patient_col_c\">\n                <div class=\"slider_container\">\n                    <input [(ngModel)]=\"this.sharedBin.weight_lb\" \n                    type=\"range\" min=\"5\" max=\"400\" value=\"50\" class=\"slider\" step=\"1\">\n                </div>\n            </div>\n        </div>\n            \n        <!--Insulin-->\n        <div class=\"patient_row\">\n            <div class=\"patient_col_a\">\n                <p>Current Insulin:</p>\n            </div>\n            <div class=\"patient_col_b\">\n                <input [(ngModel)]=\"this.sharedBin.insulin_current\" class=\"form-control\" placeholder=\"---\">\n            </div>\n            <div class=\"patient_col_c\">\n                <div class=\"slider_container\">\n                    <input [(ngModel)]=\"this.sharedBin.insulin_current\" \n                    type=\"range\" min=\"5\" max=\"12\" value=\"50\" class=\"slider\" step=\"0.1\">\n                </div>\n            </div>\n        </div>\n\n        <!--Cholesterol-->\n        <div class=\"patient_row\">\n            <div class=\"patient_col_a\">\n                <p>Cholesterol:</p>\n            </div>\n            <div class=\"patient_col_b\">\n                <input [(ngModel)]=\"this.sharedBin.cholesterol\" class=\"form-control\" placeholder=\"---\">\n            </div>\n            <div class=\"patient_col_c\">\n                <div class=\"slider_container\">\n                    <input [(ngModel)]=\"this.sharedBin.cholesterol\" \n                    type=\"range\" min=\"5\" max=\"12\" value=\"50\" class=\"slider\" step=\"0.1\">\n                </div>\n            </div>\n        </div>\n\n        <!--Heart Attack-->\n        <div class=\"patient_row\">\n            <div class=\"patient_col_a\">\n                <p>Past Heart Attack:</p>\n            </div>\n            <div class=\"patient_col_b\">\n                <label class=\"switch_container\">\n                    <input type=\"checkbox\" [(ngModel)]=\"this.sharedBin.heart_attack\" class=\"form-control\">\n                    <span class=\"switch round\"></span>\n                </label>\n            </div>\n            <div class=\"patient_col_c\">\n                <span *ngIf=\"this.sharedBin.heart_attack === true\">Yes</span>\n                <span *ngIf=\"this.sharedBin.heart_attack === false\">No</span>\n            </div>\n        </div>\n\n        <!--EF-->\n        <div class=\"patient_row\">\n            <div class=\"patient_col_a\">\n                <p>EF:</p>\n            </div>\n            <div class=\"patient_col_b\">\n                <input [(ngModel)]=\"this.sharedBin.EF\" class=\"form-control\" placeholder=\"---\">\n            </div>\n            <div class=\"patient_col_c\">\n                <div class=\"slider_container\">\n                    <input [(ngModel)]=\"this.sharedBin.EF\" \n                    type=\"range\" min=\"5\" max=\"12\" value=\"50\" class=\"slider\" step=\"0.1\">\n                </div>\n            </div>\n        </div>\n\n        <!--Micro Album-->\n        <div class=\"patient_row\">\n            <div class=\"patient_col_a\">\n                <p>Microalbuminuria:</p>\n            </div>\n            <div class=\"patient_col_b\">\n                <input [(ngModel)]=\"this.sharedBin.micro_album\" class=\"form-control\" placeholder=\"---\">\n            </div>\n            <div class=\"patient_col_c\">\n                <div class=\"slider_container\">\n                    <input [(ngModel)]=\"this.sharedBin.micro_album\" \n                    type=\"range\" min=\"5\" max=\"12\" value=\"50\" class=\"slider\" step=\"0.1\">\n                </div>\n            </div>\n        </div>\n\n        <!--Creatinine-->\n        <div class=\"patient_row\">\n            <div class=\"patient_col_a\">\n                <p>Creatinine:</p>\n            </div>\n            <div class=\"patient_col_b\">\n                <input [(ngModel)]=\"this.sharedBin.creatinine\" class=\"form-control\" placeholder=\"---\">\n            </div>\n            <div class=\"patient_col_c\">\n                <div class=\"slider_container\">\n                    <input [(ngModel)]=\"this.sharedBin.creatinine\" \n                    type=\"range\" min=\"5\" max=\"12\" value=\"50\" class=\"slider\" step=\"0.1\">\n                </div>\n            </div>\n        </div>\n\n        <!--Blood Pressure-->\n        <div class=\"patient_row\">\n            <div class=\"patient_col_a\">\n                <p>Blood Pressure:</p>\n            </div>\n            <div class=\"patient_col_b\"></div>\n            <div class=\"patient_col_c\">{{this.sharedBin.blood_pressure_syst}}/{{this.sharedBin.blood_pressure_dias}}</div>\n        </div>\n\n        <div class=\"patient_row\">\n            <div class=\"patient_col_a\">\n                <p class=\"sub_offset\">-Systolic:</p>\n            </div>\n            <div class=\"patient_col_b\">\n                <input [(ngModel)]=\"this.sharedBin.blood_pressure_syst\" class=\"form-control\" placeholder=\"---\">\n            </div>\n            <div class=\"patient_col_c\">\n                <div class=\"slider_container\">\n                    <input [(ngModel)]=\"this.sharedBin.blood_pressure_syst\" \n                    type=\"range\" min=\"90\" max=\"250\" value=\"50\" class=\"slider\" step=\"10\">\n                </div>\n            </div>\n        </div>\n\n        <div class=\"patient_row\">\n            <div class=\"patient_col_a\">\n                <p class=\"sub_offset\">-Diastolic:</p>\n            </div>\n            <div class=\"patient_col_b\">\n                <input [(ngModel)]=\"this.sharedBin.blood_pressure_dias\" class=\"form-control\" placeholder=\"---\">\n            </div>\n            <div class=\"patient_col_c\">\n                <div class=\"slider_container\">\n                    <input [(ngModel)]=\"this.sharedBin.blood_pressure_dias\" \n                    type=\"range\" min=\"60\" max=\"140\" value=\"50\" class=\"slider\" step=\"10\">\n                </div>\n            </div>\n        </div>\n\n        <!--eGFR-->\n        <div class=\"patient_row\">\n            <div class=\"patient_col_a\">\n                <p>eGFR:</p>\n            </div>\n            <div class=\"patient_col_b\">\n                <input [(ngModel)]=\"this.sharedBin.eGFR\" class=\"form-control\" placeholder=\"---\">\n            </div>\n            <div class=\"patient_col_c\">\n                <div class=\"slider_container\">\n                    <input [(ngModel)]=\"this.sharedBin.eGFR\" \n                    type=\"range\" min=\"5\" max=\"12\" value=\"50\" class=\"slider\" step=\"0.1\">\n                </div>\n            </div>\n        </div>\n\n    \n    </div>\n\n</div>\n\n\n\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"patient_container\">\n\n    <header (click)=\"OnClick()\">\n        <span>Patient Info</span>\n        <span class=\"triangle\">&#9660;</span>\n    </header>\n\n    <!----------------------------->\n\n    <div *ngIf=\"open == false\" class=\"cardback\" (click)=\"OnClick()\">\n        <h6>A1C: {{this.sharedBin.a1c}}%</h6>\n        <h6>Newly Diagnosed: \n            <span *ngIf=\"this.sharedBin.newly_diagnosed === true\">Yes</span>\n            <span *ngIf=\"this.sharedBin.newly_diagnosed === false\">No</span>\n        </h6>\n        <h6>Has Symptoms: \n            <span *ngIf=\"this.sharedBin.have_symptoms === true\">Yes</span>\n            <span *ngIf=\"this.sharedBin.have_symptoms === false\">No</span>\n        </h6>\n        <h6>Weight: {{this.sharedBin.weight_kg}} kg, {{this.sharedBin.weight_lb}} lb</h6>\n        <h6>Current Insulin: {{this.sharedBin.insulin_current}}</h6>\n        <h6>Cholesterol: {{this.sharedBin.cholesterol}}</h6>\n        <h6>Past Heart Attack: \n            <span *ngIf=\"this.sharedBin.heart_attack === true\">Yes</span>\n            <span *ngIf=\"this.sharedBin.heart_attack === false\">No</span>\n        </h6>\n        <h6>EF: {{this.sharedBin.EF}}</h6>\n        <h6>Microalbuminuria: {{this.sharedBin.micro_album}}</h6>\n        <h6>Creatinine: {{this.sharedBin.creatinine}}</h6>\n        <h6>Blood Pressure: {{this.sharedBin.blood_pressure_syst}}/{{this.sharedBin.blood_pressure_dias}}</h6>\n        <h6>eGFR: {{this.sharedBin.eGFR}}</h6>\n    </div>\n\n    <!----------------------------->\n\n    <div *ngIf=\"open == true\" class=\"cardback\">\n\n        <!--A1C-->\n        <div class=\"patient_row\">\n            <div class=\"patient_col_a\">\n                <p>A1C%:</p>\n            </div>\n            <div class=\"patient_col_b\">\n                <input [(ngModel)]=\"this.sharedBin.a1c\" class=\"form-control\" placeholder=\"---\">\n            </div>\n            <div class=\"patient_col_c\">\n                <div class=\"slider_container\">\n                    <input [(ngModel)]=\"this.sharedBin.a1c\" \n                    type=\"range\" min=\"5\" max=\"12\" value=\"50\" class=\"slider\" step=\"0.1\">\n                </div>\n            </div>\n        </div>\n\n        <!--New Patient-->\n        <div class=\"patient_row\">\n            <div class=\"patient_col_a\">\n                <p>New Patient:</p>\n            </div>\n            <div class=\"patient_col_b\">\n                <label class=\"switch_container\">\n                    <input type=\"checkbox\" [(ngModel)]=\"this.sharedBin.newly_diagnosed\" class=\"form-control\">\n                    <span class=\"switch round\"></span>\n                </label>\n            </div>\n            <div class=\"patient_col_c\">\n                <span *ngIf=\"this.sharedBin.newly_diagnosed === true\">Yes</span>\n                <span *ngIf=\"this.sharedBin.newly_diagnosed === false\">No</span>\n            </div>\n        </div>\n\n        <!--Symptoms-->\n        <div class=\"patient_row\">\n            <div class=\"patient_col_a\">\n                <p>Showing Symptoms:</p>\n            </div>\n            <div class=\"patient_col_b\">\n                <label class=\"switch_container\">\n                    <input type=\"checkbox\" [(ngModel)]=\"this.sharedBin.have_symptoms\" class=\"form-control\">\n                    <span class=\"switch round\"></span>\n                </label>\n            </div>\n            <div class=\"patient_col_c\">\n                <span *ngIf=\"this.sharedBin.have_symptoms === true\">Yes</span>\n                <span *ngIf=\"this.sharedBin.have_symptoms === false\">No</span>\n            </div>\n        </div>\n\n        <!--Weight-->\n        <div class=\"patient_row\">\n            <div class=\"patient_col_a\">\n                <p>Weight:</p>\n            </div>\n            <div class=\"patient_col_b\"></div>\n            <div class=\"patient_col_c\"></div>\n        </div>\n\n        <div class=\"patient_row\">\n            <div class=\"patient_col_a\">\n                <p class=\"sub_offset\">-kg:</p>\n            </div>\n            <div class=\"patient_col_b\">\n                <input [(ngModel)]=\"this.sharedBin.weight_kg\" class=\"form-control\" placeholder=\"---\">\n            </div>\n            <div class=\"patient_col_c\">\n                <div class=\"slider_container\">\n                    <input [(ngModel)]=\"this.sharedBin.weight_kg\" \n                    type=\"range\" min=\"2\" max=\"182\" value=\"50\" class=\"slider\" step=\"0.1\">\n                </div>\n            </div>\n        </div>\n\n        <div class=\"patient_row\">\n            <div class=\"patient_col_a\">\n                <p class=\"sub_offset\">-lb:</p>\n            </div>\n            <div class=\"patient_col_b\">\n                <input [(ngModel)]=\"this.sharedBin.weight_lb\" class=\"form-control\" placeholder=\"---\">\n            </div>\n            <div class=\"patient_col_c\">\n                <div class=\"slider_container\">\n                    <input [(ngModel)]=\"this.sharedBin.weight_lb\" \n                    type=\"range\" min=\"5\" max=\"400\" value=\"50\" class=\"slider\" step=\"1\">\n                </div>\n            </div>\n        </div>\n            \n        <!--Insulin-->\n        <div class=\"patient_row\">\n            <div class=\"patient_col_a\">\n                <p>Current Insulin:</p>\n            </div>\n            <div class=\"patient_col_b\">\n                <input [(ngModel)]=\"this.sharedBin.insulin_current\" class=\"form-control\" placeholder=\"---\">\n            </div>\n            <div class=\"patient_col_c\">\n                <div class=\"slider_container\">\n                    <input [(ngModel)]=\"this.sharedBin.insulin_current\" \n                    type=\"range\" min=\"5\" max=\"12\" value=\"50\" class=\"slider\" step=\"0.1\">\n                </div>\n            </div>\n        </div>\n\n        <!--Cholesterol-->\n        <div class=\"patient_row\">\n            <div class=\"patient_col_a\">\n                <p>Cholesterol:</p>\n            </div>\n            <div class=\"patient_col_b\">\n                <input [(ngModel)]=\"this.sharedBin.cholesterol\" class=\"form-control\" placeholder=\"---\">\n            </div>\n            <div class=\"patient_col_c\">\n                <div class=\"slider_container\">\n                    <input [(ngModel)]=\"this.sharedBin.cholesterol\" \n                    type=\"range\" min=\"5\" max=\"12\" value=\"50\" class=\"slider\" step=\"0.1\">\n                </div>\n            </div>\n        </div>\n\n        <!--Heart Attack-->\n        <div class=\"patient_row\">\n            <div class=\"patient_col_a\">\n                <p>Past Heart Attack:</p>\n            </div>\n            <div class=\"patient_col_b\">\n                <label class=\"switch_container\">\n                    <input type=\"checkbox\" [(ngModel)]=\"this.sharedBin.heart_attack\" class=\"form-control\">\n                    <span class=\"switch round\"></span>\n                </label>\n            </div>\n            <div class=\"patient_col_c\">\n                <span *ngIf=\"this.sharedBin.heart_attack === true\">Yes</span>\n                <span *ngIf=\"this.sharedBin.heart_attack === false\">No</span>\n            </div>\n        </div>\n\n        <!--EF-->\n        <div class=\"patient_row\">\n            <div class=\"patient_col_a\">\n                <p>EF:</p>\n            </div>\n            <div class=\"patient_col_b\">\n                <input [(ngModel)]=\"this.sharedBin.EF\" class=\"form-control\" placeholder=\"---\">\n            </div>\n            <div class=\"patient_col_c\">\n                <div class=\"slider_container\">\n                    <input [(ngModel)]=\"this.sharedBin.EF\" \n                    type=\"range\" min=\"5\" max=\"12\" value=\"50\" class=\"slider\" step=\"0.1\">\n                </div>\n            </div>\n        </div>\n\n        <!--Micro Album-->\n        <div class=\"patient_row\">\n            <div class=\"patient_col_a\">\n                <p>Microalbuminuria:</p>\n            </div>\n            <div class=\"patient_col_b\">\n                <input [(ngModel)]=\"this.sharedBin.micro_album\" class=\"form-control\" placeholder=\"---\">\n            </div>\n            <div class=\"patient_col_c\">\n                <div class=\"slider_container\">\n                    <input [(ngModel)]=\"this.sharedBin.micro_album\" \n                    type=\"range\" min=\"5\" max=\"12\" value=\"50\" class=\"slider\" step=\"0.1\">\n                </div>\n            </div>\n        </div>\n\n        <!--Creatinine-->\n        <div class=\"patient_row\">\n            <div class=\"patient_col_a\">\n                <p>Creatinine:</p>\n            </div>\n            <div class=\"patient_col_b\">\n                <input [(ngModel)]=\"this.sharedBin.creatinine\" class=\"form-control\" placeholder=\"---\">\n            </div>\n            <div class=\"patient_col_c\">\n                <div class=\"slider_container\">\n                    <input [(ngModel)]=\"this.sharedBin.creatinine\" \n                    type=\"range\" min=\"5\" max=\"12\" value=\"50\" class=\"slider\" step=\"0.1\">\n                </div>\n            </div>\n        </div>\n\n        <!--Blood Pressure-->\n        <div class=\"patient_row\">\n            <div class=\"patient_col_a\">\n                <p>Blood Pressure:</p>\n            </div>\n            <div class=\"patient_col_b\"></div>\n            <div class=\"patient_col_c\">{{this.sharedBin.blood_pressure_syst}}/{{this.sharedBin.blood_pressure_dias}}</div>\n        </div>\n\n        <div class=\"patient_row\">\n            <div class=\"patient_col_a\">\n                <p class=\"sub_offset\">-Systolic:</p>\n            </div>\n            <div class=\"patient_col_b\">\n                <input [(ngModel)]=\"this.sharedBin.blood_pressure_syst\" class=\"form-control\" placeholder=\"---\">\n            </div>\n            <div class=\"patient_col_c\">\n                <div class=\"slider_container\">\n                    <input [(ngModel)]=\"this.sharedBin.blood_pressure_syst\" \n                    type=\"range\" min=\"90\" max=\"250\" value=\"50\" class=\"slider\" step=\"10\">\n                </div>\n            </div>\n        </div>\n\n        <div class=\"patient_row\">\n            <div class=\"patient_col_a\">\n                <p class=\"sub_offset\">-Diastolic:</p>\n            </div>\n            <div class=\"patient_col_b\">\n                <input [(ngModel)]=\"this.sharedBin.blood_pressure_dias\" class=\"form-control\" placeholder=\"---\">\n            </div>\n            <div class=\"patient_col_c\">\n                <div class=\"slider_container\">\n                    <input [(ngModel)]=\"this.sharedBin.blood_pressure_dias\" \n                    type=\"range\" min=\"60\" max=\"140\" value=\"50\" class=\"slider\" step=\"10\">\n                </div>\n            </div>\n        </div>\n\n        <!--eGFR-->\n        <div class=\"patient_row\">\n            <div class=\"patient_col_a\">\n                <p>eGFR:</p>\n            </div>\n            <div class=\"patient_col_b\">\n                <input [(ngModel)]=\"this.sharedBin.eGFR\" class=\"form-control\" placeholder=\"---\">\n            </div>\n            <div class=\"patient_col_c\">\n                <div class=\"slider_container\">\n                    <input [(ngModel)]=\"this.sharedBin.eGFR\" \n                    type=\"range\" min=\"5\" max=\"12\" value=\"50\" class=\"slider\" step=\"0.1\">\n                </div>\n            </div>\n        </div>\n\n    \n    </div>\n\n</div>\n\n\n\n\n");
 
 /***/ }),
 
@@ -471,24 +471,18 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let AppComponent = class AppComponent {
-    constructor(sharedBin) {
+    constructor(sharedBin, cd) {
         this.sharedBin = sharedBin;
+        this.cd = cd;
     }
-    ngOnInit() {
-        console.log("Console starts here");
-    }
-    ngOnChanges() {
-        // if (this.sharedBin.a1c >= 9 && this.sharedBin.a1c < 10){
-        //     console.log("hyoyoyoyoyo");
-        //     this.sharedBin.active = "triple";
-        // }
-        // else{
-        //     this.sharedBin.active = "";
-        // }
+    //this evaluates the changes again, for this parent component, because some values are changed herewithin(removes an error)
+    ngAfterViewInit() {
+        this.cd.detectChanges();
     }
 };
 AppComponent.ctorParameters = () => [
-    { type: _shared_bin_service__WEBPACK_IMPORTED_MODULE_2__["SharedBinService"] }
+    { type: _shared_bin_service__WEBPACK_IMPORTED_MODULE_2__["SharedBinService"] },
+    { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"] }
 ];
 AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -498,105 +492,6 @@ AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     })
 ], AppComponent);
 
-//this._router.navigate(['authors/all'])
-// private _route: ActivatedRoute,
-// private _router: Router
-//import { ActivatedRoute, Params, Router } from '@angular/router';
-// this._route.params.subscribe(params => {
-//             console.log(params);
-//             this.id=params.id;
-//         })
-// getTasks(){
-//     this.updatetask = null;
-//     this.createtask = {
-//         title: "",
-//         description: ""
-//     }
-//     let observable = this._httpService.getTasks()
-//     observable.subscribe(data => {
-//         this.tasks = data['results'];
-//         this.onetask = null;
-//     });
-// }
-// getOneTask(id:number){
-//     this.errors = null;
-//     let observable = this._httpService.getOneTask(id)
-//     observable.subscribe(data => {
-//         this.tasks = null;
-//         this.onetask = data['results'];
-//     });
-// }
-// createTask(){
-//     this.errors = null;
-//     let observable = this._httpService.createTask(this.createtask)
-//     observable.subscribe(data => {
-//         if(data["results"]){
-//             this.getTasks();
-//             this.createtask = {
-//                 title: "",
-//                 description: ""
-//             }
-//         }
-//         else if(data["errors"]){
-//             this.errors = [];
-//             for(let item in data["errors"]){
-//                 this.errors.push(data["errors"][item]);
-//             }
-//         }
-//     });       
-// }
-// deleteTask(id:number){
-//     //resets
-//     this.errors = null;
-//     this.updatetask = null;
-//     this.createtask = {
-//         title: "",
-//         description: ""
-//     }
-//     let observable = this._httpService.deleteTask(id)
-//     observable.subscribe(data => {
-//         this.getTasks();
-//         this.onetask = null;
-//     });
-// }
-// markComplete(id:number){
-//     //resets
-//     this.errors = null;
-//     let observable = this._httpService.markComplete(id)
-//     observable.subscribe(data => {
-//         this.getOneTask(id);
-//     });
-// }
-// editTask(){
-//     console.log("hereh;rake;jrakj;er")
-//     //resets
-//     this.createtask = null;
-//     this.errors = null;
-//     this.updatetask = {
-//         title: this.onetask.title,
-//         description: this.onetask.description
-//     }
-// }
-// updateTask(id:number){
-//     console.log(id)
-//     let observable = this._httpService.updateTask(id, this.updatetask)
-//     observable.subscribe(data => {
-//         if(data["results"]){
-//             this.createtask = {
-//             title: "",
-//             description: ""
-//             }
-//             this.getOneTask(id);
-//             this.updatetask = null;
-//         }
-//         else if(data["errors"]){
-//             this.errors = [];
-//             for(let item in data["errors"]){
-//                 this.errors.push(data["errors"][item]);
-//             }
-//         }
-//     });
-// }
 
 
 /***/ }),
@@ -787,7 +682,8 @@ let DoctorsOfficeComponent = class DoctorsOfficeComponent {
     ngOnInit() {
         this.main_Diagnosis_Logic();
     }
-    ngOnChanges() {
+    ngOnChanges(changes) {
+        this.weight_conversion(changes);
         this.main_Diagnosis_Logic();
     }
     main_Diagnosis_Logic() {
@@ -802,6 +698,25 @@ let DoctorsOfficeComponent = class DoctorsOfficeComponent {
         }
         else {
             this.diagnosis = { active_therapy: "none" };
+        }
+    }
+    //2.2046226218 lb in 1 kilogram
+    weight_conversion(changes) {
+        // if kg was changed, change lb
+        if (changes.weight_kg) {
+            var converted_to_lb = Math.round(2.2046226218 * changes.weight_kg.currentValue);
+            //checks if needed first.  Infinite loop would happen without
+            if (this.sharedBin.weight_lb != converted_to_lb) {
+                this.sharedBin.weight_lb = converted_to_lb;
+            }
+        }
+        // if lb was changed, change kg
+        if (changes.weight_lb) {
+            var converted_to_kg = Math.round(changes.weight_lb.currentValue / 2.2046226218);
+            //checks if needed first.  Infinite loop would happen without
+            if (this.sharedBin.weight_kg != converted_to_kg) {
+                this.sharedBin.weight_kg = converted_to_kg;
+            }
         }
     }
 };
@@ -1222,6 +1137,8 @@ let SharedBinService = class SharedBinService {
         this.newly_diagnosed = true;
         this.have_symptoms = false;
         this.a1c = 7.0;
+        this.weight_lb = 0;
+        this.weight_kg = 0;
         this.heart_attack = false;
         this.blood_pressure_syst = 120;
         this.blood_pressure_dias = 80;
