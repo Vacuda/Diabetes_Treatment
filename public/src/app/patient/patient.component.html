@@ -38,12 +38,15 @@
         <!--A1C-->
         <div class="patient_row">
             <div class="patient_col_a">
-                <p>A1C%:</p>
+                <p>A1C:</p>
             </div>
             <div class="patient_col_b">
                 <input [(ngModel)]="this.sharedBin.a1c" class="form-control" placeholder="---">
             </div>
             <div class="patient_col_c">
+                <p>%</p>
+            </div>
+            <div class="patient_col_d">
                 <div class="slider_container">
                     <input [(ngModel)]="this.sharedBin.a1c" 
                     type="range" min="5" max="12" value="50" class="slider" step="0.1">
@@ -62,7 +65,8 @@
                     <span class="switch round"></span>
                 </label>
             </div>
-            <div class="patient_col_c">
+            <div class="patient_col_c"></div>
+            <div class="patient_col_d">
                 <span *ngIf="this.sharedBin.newly_diagnosed === true">Yes</span>
                 <span *ngIf="this.sharedBin.newly_diagnosed === false">No</span>
             </div>
@@ -79,7 +83,8 @@
                     <span class="switch round"></span>
                 </label>
             </div>
-            <div class="patient_col_c">
+            <div class="patient_col_c"></div>
+            <div class="patient_col_d">
                 <span *ngIf="this.sharedBin.have_symptoms === true">Yes</span>
                 <span *ngIf="this.sharedBin.have_symptoms === false">No</span>
             </div>
@@ -90,18 +95,13 @@
             <div class="patient_col_a">
                 <p>Weight:</p>
             </div>
-            <div class="patient_col_b"></div>
-            <div class="patient_col_c"></div>
-        </div>
-
-        <div class="patient_row">
-            <div class="patient_col_a">
-                <p class="sub_offset">-kg:</p>
-            </div>
             <div class="patient_col_b">
                 <input [(ngModel)]="this.sharedBin.weight_kg" class="form-control" placeholder="---">
             </div>
             <div class="patient_col_c">
+                <p>kg</p>
+            </div>
+            <div class="patient_col_d">
                 <div class="slider_container">
                     <input [(ngModel)]="this.sharedBin.weight_kg" 
                     type="range" min="2" max="182" value="50" class="slider" step="0.1">
@@ -111,12 +111,15 @@
 
         <div class="patient_row">
             <div class="patient_col_a">
-                <p class="sub_offset">-lb:</p>
+                <p class="sub_offset"></p>
             </div>
             <div class="patient_col_b">
                 <input [(ngModel)]="this.sharedBin.weight_lb" class="form-control" placeholder="---">
             </div>
             <div class="patient_col_c">
+                <p>lb</p>
+            </div>
+            <div class="patient_col_d">
                 <div class="slider_container">
                     <input [(ngModel)]="this.sharedBin.weight_lb" 
                     type="range" min="5" max="400" value="50" class="slider" step="1">
@@ -133,6 +136,9 @@
                 <input [(ngModel)]="this.sharedBin.insulin_current" class="form-control" placeholder="---">
             </div>
             <div class="patient_col_c">
+                <p>??</p>
+            </div>
+            <div class="patient_col_d">
                 <div class="slider_container">
                     <input [(ngModel)]="this.sharedBin.insulin_current" 
                     type="range" min="5" max="12" value="50" class="slider" step="0.1">
@@ -149,6 +155,9 @@
                 <input [(ngModel)]="this.sharedBin.cholesterol" class="form-control" placeholder="---">
             </div>
             <div class="patient_col_c">
+                <p>mg/mL</p>
+            </div>
+            <div class="patient_col_d">
                 <div class="slider_container">
                     <input [(ngModel)]="this.sharedBin.cholesterol" 
                     type="range" min="5" max="12" value="50" class="slider" step="0.1">
@@ -167,7 +176,8 @@
                     <span class="switch round"></span>
                 </label>
             </div>
-            <div class="patient_col_c">
+            <div class="patient_col_c"></div>
+            <div class="patient_col_d">
                 <span *ngIf="this.sharedBin.heart_attack === true">Yes</span>
                 <span *ngIf="this.sharedBin.heart_attack === false">No</span>
             </div>
@@ -182,6 +192,9 @@
                 <input [(ngModel)]="this.sharedBin.EF" class="form-control" placeholder="---">
             </div>
             <div class="patient_col_c">
+                <p>??</p>
+            </div>
+            <div class="patient_col_d">
                 <div class="slider_container">
                     <input [(ngModel)]="this.sharedBin.EF" 
                     type="range" min="5" max="12" value="50" class="slider" step="0.1">
@@ -198,6 +211,9 @@
                 <input [(ngModel)]="this.sharedBin.micro_album" class="form-control" placeholder="---">
             </div>
             <div class="patient_col_c">
+                <p>mg/g</p>
+            </div>
+            <div class="patient_col_d">
                 <div class="slider_container">
                     <input [(ngModel)]="this.sharedBin.micro_album" 
                     type="range" min="5" max="12" value="50" class="slider" step="0.1">
@@ -214,6 +230,9 @@
                 <input [(ngModel)]="this.sharedBin.creatinine" class="form-control" placeholder="---">
             </div>
             <div class="patient_col_c">
+                <p>mg/mL</p>
+            </div>
+            <div class="patient_col_d">
                 <div class="slider_container">
                     <input [(ngModel)]="this.sharedBin.creatinine" 
                     type="range" min="5" max="12" value="50" class="slider" step="0.1">
@@ -227,7 +246,8 @@
                 <p>Blood Pressure:</p>
             </div>
             <div class="patient_col_b"></div>
-            <div class="patient_col_c">{{this.sharedBin.blood_pressure_syst}}/{{this.sharedBin.blood_pressure_dias}}</div>
+            <div class="patient_col_c"></div>
+            <div class="patient_col_d">{{this.sharedBin.blood_pressure_syst}}/{{this.sharedBin.blood_pressure_dias}}</div>
         </div>
 
         <div class="patient_row">
@@ -238,6 +258,9 @@
                 <input [(ngModel)]="this.sharedBin.blood_pressure_syst" class="form-control" placeholder="---">
             </div>
             <div class="patient_col_c">
+                <p>mmHg</p>
+            </div>
+            <div class="patient_col_d">
                 <div class="slider_container">
                     <input [(ngModel)]="this.sharedBin.blood_pressure_syst" 
                     type="range" min="90" max="250" value="50" class="slider" step="10">
@@ -253,6 +276,9 @@
                 <input [(ngModel)]="this.sharedBin.blood_pressure_dias" class="form-control" placeholder="---">
             </div>
             <div class="patient_col_c">
+                <p>mmHg</p>
+            </div>
+            <div class="patient_col_d">
                 <div class="slider_container">
                     <input [(ngModel)]="this.sharedBin.blood_pressure_dias" 
                     type="range" min="60" max="140" value="50" class="slider" step="10">
@@ -269,6 +295,9 @@
                 <input [(ngModel)]="this.sharedBin.eGFR" class="form-control" placeholder="---">
             </div>
             <div class="patient_col_c">
+                <p>mL/min</p>
+            </div>
+            <div class="patient_col_d">
                 <div class="slider_container">
                     <input [(ngModel)]="this.sharedBin.eGFR" 
                     type="range" min="5" max="12" value="50" class="slider" step="0.1">

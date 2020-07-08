@@ -38,7 +38,20 @@
         }
 
     .patient_col_c {
-        width: 40%;
+        width:6%;
+        height: 36px;
+        padding-top: 12px;
+        display: inline-block;
+        text-align: center;
+    }
+
+    .patient_col_c p{
+        font-size: 8px;
+        text-overflow: hidden;
+    }
+
+    .patient_col_d {
+        width: 34%;
         height: 36px;
         padding: 6.5px 5px;
         display: inline-block;
@@ -46,7 +59,7 @@
         /* outline: 1px dashed red; */
     }
 
-        .patient_col_c span {
+        .patient_col_d span {
             margin-top: 13px;
             margin-bottom: 0px;
         }
