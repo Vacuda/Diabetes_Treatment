@@ -2,7 +2,7 @@
 
     <header (click)="OnClick()">
         <span>Patient Info</span>
-        <span class="triangle">&#9660;</span>
+        <span class="hamburger">&#9776;</span>
     </header>
 
     <!----------------------------->
@@ -110,9 +110,7 @@
         </div>
 
         <div class="patient_row">
-            <div class="patient_col_a">
-                <p class="sub_offset"></p>
-            </div>
+            <div class="patient_col_a"></div>
             <div class="patient_col_b">
                 <input [(ngModel)]="this.sharedBin.weight_lb" class="form-control" placeholder="---">
             </div>

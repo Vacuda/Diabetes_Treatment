@@ -1,9 +1,33 @@
 <div [ngClass]="{'active':active === true}" 
     class="info_container">
-    <h6 (click)="OnClick()">Metaformin</h6>
+    
+    <h6 (click)="OnClick()">
+        <span>Metaformin</span>
+        <span class="hamburger">&#9776;</span>
+    </h6>
 
     <div *ngIf="open === true" class="infoback">
         
+        <!--Dosage-->
+        <div class="patient_row">
+            <div class="patient_col_a">
+                <p>Metaformin Dosage:</p>
+            </div>
+            <div class="patient_col_b">
+                <input [(ngModel)]="this.sharedBin.metaformin_dosage" class="form-control" placeholder="---">
+            </div>
+            <div class="patient_col_c">
+                <p>mg</p>
+            </div>
+            <div class="patient_col_d">
+                <div class="slider_container">
+                    <input [(ngModel)]="this.sharedBin.metaformin_dosage" 
+                    type="range" min="5" max="12" value="50" class="slider" step="0.1">
+                </div>
+            </div>
+        </div>
+
+
         <table>
             <tr>
                 <th>Efficacy</th>

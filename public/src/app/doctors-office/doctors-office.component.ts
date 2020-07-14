@@ -52,6 +52,17 @@ export class DoctorsOfficeComponent implements OnInit {
     }
 
     main_Diagnosis_Logic(){
+        
+        console.log("shared" + this.sharedBin.weight_kg);
+        console.log("direct" + this.weight_kg);
+
+        if(this.newly_diagnosed == true && this.a1c){
+
+            this.diagnosis = {active_therapy:"mono"};
+        }
+
+
+
 
         if(this.a1c > 7 && this.a1c < 9){
             this.diagnosis = {active_therapy:"mono"};

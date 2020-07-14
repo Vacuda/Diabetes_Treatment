@@ -2,7 +2,7 @@
     class="therapy_container">
     <header (click)="OnClick()">
         <span>Mono Therapy</span>
-        <span class="triangle">&#9660;</span>
+        <span class="hamburger">&#9776;</span>
     </header>
 
     <div *ngIf="open === true" class="cardback">
@@ -10,8 +10,6 @@
         <app-lifestyle [active] = "active"></app-lifestyle>
         <app-metformin [active] = "active"></app-metformin> 
         <div class="division">~~~~</div>
-        <p>{{this.sharedBin.a1c}}</p>
-        <p>Initiate metformin therapy if no contradictions</p>
         
     </div>
 </div>

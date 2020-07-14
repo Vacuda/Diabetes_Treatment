@@ -20,20 +20,20 @@
 
 /* ------------------------------*/
 
-.therapy_container {
-    margin: 0px auto;
-    display: block;
-    width: 90%;
-    padding: 5px;
-    /* outline: 1px dashed blue; */
-}
-
 .patient_container {
     margin: 0px auto;
     display: block;
     padding: 5px;
     width: 100%;
     position: relative;
+}
+
+.therapy_container {
+    margin: 0px auto;
+    display: block;
+    width: 90%;
+    padding: 5px;
+    /* outline: 1px dashed blue; */
 }
 
 .container div {
@@ -58,7 +58,11 @@ header {
     padding: 10px;
 }
 
-.triangle {
+div h6 {
+    position:relative;
+}
+
+.hamburger {
     position: absolute;
     right: 5px;
     top: -1px;

@@ -1,6 +1,10 @@
 <div [ngClass]="{'active':active === true}" 
     class="info_container">
-    <h6 (click)="OnClick()">Lifestyle Management</h6>
+    
+    <h6 (click)="OnClick()">
+        <span>Lifestyle Managment</span>
+        <span class="hamburger">&#9776;</span>
+    </h6>
 
     <div *ngIf="open === true" class="infoback">
         

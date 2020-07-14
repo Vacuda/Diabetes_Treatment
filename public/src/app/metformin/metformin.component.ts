@@ -4,7 +4,7 @@ import { SharedBinService } from '../shared-bin.service';
 @Component({
     selector: 'app-metformin',
     templateUrl: './metformin.component.html',
-    styleUrls: ['./metformin.component.css']
+    styleUrls: ["../patient/patient.component.css", './metformin.component.css']
 })
 export class MetforminComponent implements OnInit {
 
