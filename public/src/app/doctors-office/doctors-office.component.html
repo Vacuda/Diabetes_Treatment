@@ -2,13 +2,9 @@
     <div>~~~~~</div>
     <app-patient></app-patient>
     <div>~~~~~</div>
-    <app-mono [diagnosis]="diagnosis"></app-mono>
+    <app-first-line [diagnosis]="diagnosis"></app-first-line>
     <app-dual [diagnosis]="diagnosis"></app-dual>
     <app-triple [diagnosis]="diagnosis"></app-triple>
     <app-combo [diagnosis]="diagnosis"></app-combo>
-
-    <h4>--{{diagnosis.active_therapy}}--</h4>
-    <h4>-{{this.sharedBin.a1c}}-</h4>
-    <!-- <router-outlet></router-outlet> -->
 
 </div>

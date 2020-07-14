@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MonoComponent } from './mono.component';
+import { FirstLineComponent } from './first-line.component';
 
-describe('MonoComponent', () => {
-  let component: MonoComponent;
-  let fixture: ComponentFixture<MonoComponent>;
+describe('FirstLineComponent', () => {
+  let component: FirstLineComponent;
+  let fixture: ComponentFixture<FirstLineComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MonoComponent ]
+      declarations: [ FirstLineComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MonoComponent);
+    fixture = TestBed.createComponent(FirstLineComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

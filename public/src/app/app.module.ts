@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { MonoComponent } from './mono/mono.component';
+import { FirstLineComponent } from './first-line/first-line.component';
 import { DualComponent } from './dual/dual.component';
 import { TripleComponent } from './triple/triple.component';
 import { ComboComponent } from './combo/combo.component';
@@ -19,7 +19,7 @@ import { DoctorsOfficeComponent } from './doctors-office/doctors-office.componen
 @NgModule({
   declarations: [
     AppComponent,
-    MonoComponent,
+    FirstLineComponent,
     DualComponent,
     TripleComponent,
     ComboComponent,

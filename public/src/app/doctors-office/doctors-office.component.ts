@@ -58,14 +58,14 @@ export class DoctorsOfficeComponent implements OnInit {
 
         if(this.newly_diagnosed == true && this.a1c){
 
-            this.diagnosis = {active_therapy:"mono"};
+            this.diagnosis = {active_therapy:"first-line"};
         }
 
 
 
 
         if(this.a1c > 7 && this.a1c < 9){
-            this.diagnosis = {active_therapy:"mono"};
+            this.diagnosis = {active_therapy:"first-line"};
         }
         else if(this.a1c >= 9 && this.a1c < 10){
             this.diagnosis = {active_therapy:"dual"};

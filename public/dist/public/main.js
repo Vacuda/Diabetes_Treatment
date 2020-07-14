@@ -58,7 +58,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container\">\n    <div>~~~~~</div>\n    <app-patient></app-patient>\n    <div>~~~~~</div>\n    <app-mono [diagnosis]=\"diagnosis\"></app-mono>\n    <app-dual [diagnosis]=\"diagnosis\"></app-dual>\n    <app-triple [diagnosis]=\"diagnosis\"></app-triple>\n    <app-combo [diagnosis]=\"diagnosis\"></app-combo>\n\n    <h4>--{{diagnosis.active_therapy}}--</h4>\n    <h4>-{{this.sharedBin.a1c}}-</h4>\n    <!-- <router-outlet></router-outlet> -->\n\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container\">\n    <div>~~~~~</div>\n    <app-patient></app-patient>\n    <div>~~~~~</div>\n    <app-first-line [diagnosis]=\"diagnosis\"></app-first-line>\n    <app-dual [diagnosis]=\"diagnosis\"></app-dual>\n    <app-triple [diagnosis]=\"diagnosis\"></app-triple>\n    <app-combo [diagnosis]=\"diagnosis\"></app-combo>\n\n</div>");
 
 /***/ }),
 
@@ -72,6 +72,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("<div [ngClass]=\"{'active':active === true}\" \n    class=\"therapy_container\">\n\n    <header (click)=\"OnClick()\">\n        <span>Dual Therapy</span>\n        <span class=\"hamburger\">&#9776;</span>\n    </header>\n\n    <div *ngIf=\"open === true\" class=\"cardback\">\n        \n        <app-lifestyle></app-lifestyle>\n        <app-metformin></app-metformin>\n        <h6>Additional Agent</h6>\n        <div class=\"division\">~~~~</div>\n\n    </div>\n</div>");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/first-line/first-line.component.html":
+/*!********************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/first-line/first-line.component.html ***!
+  \********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div [ngClass]=\"{'active':active === true}\" \n    class=\"therapy_container\">\n    <header (click)=\"OnClick()\">\n        <span>First Line Therapy</span>\n        <span class=\"hamburger\">&#9776;</span>\n    </header>\n\n    <div *ngIf=\"open === true\" class=\"cardback\">\n\n        <app-lifestyle [active] = \"active\"></app-lifestyle>\n        <app-metformin [active] = \"active\"></app-metformin> \n        <div class=\"division\">~~~~</div>\n        \n    </div>\n</div>");
 
 /***/ }),
 
@@ -98,19 +111,6 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("<div [ngClass]=\"{'active':active === true}\" \n    class=\"info_container\">\n    \n    <h6 (click)=\"OnClick()\">\n        <span>Metaformin</span>\n        <span class=\"hamburger\">&#9776;</span>\n    </h6>\n\n    <div *ngIf=\"open === true\" class=\"infoback\">\n        \n        <!--Dosage-->\n        <div class=\"patient_row\">\n            <div class=\"patient_col_a\">\n                <p>Metaformin Dosage:</p>\n            </div>\n            <div class=\"patient_col_b\">\n                <input [(ngModel)]=\"this.sharedBin.metaformin_dosage\" class=\"form-control\" placeholder=\"---\">\n            </div>\n            <div class=\"patient_col_c\">\n                <p>mg</p>\n            </div>\n            <div class=\"patient_col_d\">\n                <div class=\"slider_container\">\n                    <input [(ngModel)]=\"this.sharedBin.metaformin_dosage\" \n                    type=\"range\" min=\"5\" max=\"12\" value=\"50\" class=\"slider\" step=\"0.1\">\n                </div>\n            </div>\n        </div>\n\n\n        <table>\n            <tr>\n                <th>Efficacy</th>\n                <td>High</td>\n            </tr>\n            <tr>\n                <th>Hypoglycemia</th>\n                <td>No</td>\n            </tr>\n            <tr>\n                <th>Weight Change</th>\n                <td>Neutral or Modest Loss</td>\n            </tr>\n            <tr>\n                <th>Cost</th>\n                <td>Low</td>\n            </tr>\n            <tr>\n                <th>Oral/SQ</th>\n                <td>Oral</td>\n            </tr>\n        </table>\n\n        <table>\n            <tr>\n                <th>CV Effects</th>\n                <td>\n                    <table>\n                        <tr>\n                            <th>ASCVD</th>\n                            <td>Potential Benefit</td>\n                        </tr>\n                        <tr>\n                            <th>CHF</th>\n                            <td>Neutral</td>\n                        </tr>\n                    </table>\n                </td>\n            </tr>\n            <tr>\n                <th>Renal Effects</th>\n                <td>\n                    <table>\n                        <tr>\n                            <th>Progression of DKD</th>\n                            <td>Neutral</td>\n                        </tr>\n                        <tr>\n                            <th>Dosing</th>\n                            <td>Contraindicated with eGRF &lt30</td>\n                        </tr>\n                    </table>\n                </td>\n            </tr>\n            <tr></tr>\n        </table>\n\n\n        <div class=\"division\">~~~~</div>\n\n    </div>\n</div>");
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/mono/mono.component.html":
-/*!********************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/mono/mono.component.html ***!
-  \********************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div [ngClass]=\"{'active':active === true}\" \n    class=\"therapy_container\">\n    <header (click)=\"OnClick()\">\n        <span>Mono Therapy</span>\n        <span class=\"hamburger\">&#9776;</span>\n    </header>\n\n    <div *ngIf=\"open === true\" class=\"cardback\">\n\n        <app-lifestyle [active] = \"active\"></app-lifestyle>\n        <app-metformin [active] = \"active\"></app-metformin> \n        <div class=\"division\">~~~~</div>\n        \n    </div>\n</div>");
 
 /***/ }),
 
@@ -513,7 +513,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
-/* harmony import */ var _mono_mono_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./mono/mono.component */ "./src/app/mono/mono.component.ts");
+/* harmony import */ var _first_line_first_line_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./first-line/first-line.component */ "./src/app/first-line/first-line.component.ts");
 /* harmony import */ var _dual_dual_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./dual/dual.component */ "./src/app/dual/dual.component.ts");
 /* harmony import */ var _triple_triple_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./triple/triple.component */ "./src/app/triple/triple.component.ts");
 /* harmony import */ var _combo_combo_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./combo/combo.component */ "./src/app/combo/combo.component.ts");
@@ -544,7 +544,7 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
         declarations: [
             _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
-            _mono_mono_component__WEBPACK_IMPORTED_MODULE_7__["MonoComponent"],
+            _first_line_first_line_component__WEBPACK_IMPORTED_MODULE_7__["FirstLineComponent"],
             _dual_dual_component__WEBPACK_IMPORTED_MODULE_8__["DualComponent"],
             _triple_triple_component__WEBPACK_IMPORTED_MODULE_9__["TripleComponent"],
             _combo_combo_component__WEBPACK_IMPORTED_MODULE_10__["ComboComponent"],
@@ -690,10 +690,10 @@ let DoctorsOfficeComponent = class DoctorsOfficeComponent {
         console.log("shared" + this.sharedBin.weight_kg);
         console.log("direct" + this.weight_kg);
         if (this.newly_diagnosed == true && this.a1c) {
-            this.diagnosis = { active_therapy: "mono" };
+            this.diagnosis = { active_therapy: "first-line" };
         }
         if (this.a1c > 7 && this.a1c < 9) {
-            this.diagnosis = { active_therapy: "mono" };
+            this.diagnosis = { active_therapy: "first-line" };
         }
         else if (this.a1c >= 9 && this.a1c < 10) {
             this.diagnosis = { active_therapy: "dual" };
@@ -855,6 +855,79 @@ DualComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
+/***/ "./src/app/first-line/first-line.component.css":
+/*!*****************************************************!*\
+  !*** ./src/app/first-line/first-line.component.css ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2ZpcnN0LWxpbmUvZmlyc3QtbGluZS5jb21wb25lbnQuY3NzIn0= */");
+
+/***/ }),
+
+/***/ "./src/app/first-line/first-line.component.ts":
+/*!****************************************************!*\
+  !*** ./src/app/first-line/first-line.component.ts ***!
+  \****************************************************/
+/*! exports provided: FirstLineComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FirstLineComponent", function() { return FirstLineComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _shared_bin_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../shared-bin.service */ "./src/app/shared-bin.service.ts");
+
+
+
+let FirstLineComponent = class FirstLineComponent {
+    constructor(sharedBin) {
+        this.sharedBin = sharedBin;
+        this.active = false;
+        this.open = false;
+    }
+    ngOnInit() {
+    }
+    ngOnChanges() {
+        if (this.diagnosis.active_therapy == "first-line") {
+            this.active = true;
+        }
+        else {
+            this.active = false;
+        }
+    }
+    //open - close
+    OnClick() {
+        if (this.open === true) {
+            this.open = false;
+        }
+        else {
+            this.open = true;
+        }
+    }
+};
+FirstLineComponent.ctorParameters = () => [
+    { type: _shared_bin_service__WEBPACK_IMPORTED_MODULE_2__["SharedBinService"] }
+];
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], FirstLineComponent.prototype, "diagnosis", void 0);
+FirstLineComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-first-line',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./first-line.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/first-line/first-line.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./first-line.component.css */ "./src/app/first-line/first-line.component.css")).default]
+    })
+], FirstLineComponent);
+
+
+
+/***/ }),
+
 /***/ "./src/app/lifestyle/lifestyle.component.css":
 /*!***************************************************!*\
   !*** ./src/app/lifestyle/lifestyle.component.css ***!
@@ -982,79 +1055,6 @@ MetforminComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ../patient/patient.component.css */ "./src/app/patient/patient.component.css")).default, tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./metformin.component.css */ "./src/app/metformin/metformin.component.css")).default]
     })
 ], MetforminComponent);
-
-
-
-/***/ }),
-
-/***/ "./src/app/mono/mono.component.css":
-/*!*****************************************!*\
-  !*** ./src/app/mono/mono.component.css ***!
-  \*****************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21vbm8vbW9uby5jb21wb25lbnQuY3NzIn0= */");
-
-/***/ }),
-
-/***/ "./src/app/mono/mono.component.ts":
-/*!****************************************!*\
-  !*** ./src/app/mono/mono.component.ts ***!
-  \****************************************/
-/*! exports provided: MonoComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MonoComponent", function() { return MonoComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _shared_bin_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../shared-bin.service */ "./src/app/shared-bin.service.ts");
-
-
-
-let MonoComponent = class MonoComponent {
-    constructor(sharedBin) {
-        this.sharedBin = sharedBin;
-        this.active = false;
-        this.open = false;
-    }
-    ngOnInit() {
-    }
-    ngOnChanges() {
-        if (this.diagnosis.active_therapy == "mono") {
-            this.active = true;
-        }
-        else {
-            this.active = false;
-        }
-    }
-    //open - close
-    OnClick() {
-        if (this.open === true) {
-            this.open = false;
-        }
-        else {
-            this.open = true;
-        }
-    }
-};
-MonoComponent.ctorParameters = () => [
-    { type: _shared_bin_service__WEBPACK_IMPORTED_MODULE_2__["SharedBinService"] }
-];
-tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
-], MonoComponent.prototype, "diagnosis", void 0);
-MonoComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-mono',
-        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./mono.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/mono/mono.component.html")).default,
-        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./mono.component.css */ "./src/app/mono/mono.component.css")).default]
-    })
-], MonoComponent);
 
 
 

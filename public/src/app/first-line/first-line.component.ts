@@ -2,11 +2,11 @@ import { Component, OnInit, Input } from '@angular/core';
 import { SharedBinService } from '../shared-bin.service';
 
 @Component({
-    selector: 'app-mono',
-    templateUrl: './mono.component.html',
-    styleUrls: ['./mono.component.css']
+    selector: 'app-first-line',
+    templateUrl: './first-line.component.html',
+    styleUrls: ['./first-line.component.css']
 })
-export class MonoComponent implements OnInit {
+export class FirstLineComponent implements OnInit {
 
     @Input() diagnosis:any;
     
@@ -20,7 +20,7 @@ export class MonoComponent implements OnInit {
     }
 
     ngOnChanges() {
-        if(this.diagnosis.active_therapy == "mono"){
+        if(this.diagnosis.active_therapy == "first-line"){
             this.active = true;
         }
         else{
