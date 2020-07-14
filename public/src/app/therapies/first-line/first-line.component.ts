@@ -1,12 +1,12 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { SharedBinService } from '../shared-bin.service';
+import { SharedBinService } from '../../shared-bin.service';
 
 @Component({
-    selector: 'app-combo',
-    templateUrl: './combo.component.html',
-    styleUrls: ['./combo.component.css']
+    selector: 'app-first-line',
+    templateUrl: './first-line.component.html',
+    styleUrls: ['./first-line.component.css']
 })
-export class ComboComponent implements OnInit {
+export class FirstLineComponent implements OnInit {
 
     @Input() diagnosis:any;
     
@@ -16,11 +16,11 @@ export class ComboComponent implements OnInit {
     constructor( private sharedBin: SharedBinService ) { }
 
     ngOnInit() {
-
+        
     }
 
     ngOnChanges() {
-        if(this.diagnosis.active_therapy == "combo"){
+        if(this.diagnosis.active_therapy == "first-line"){
             this.active = true;
         }
         else{
@@ -31,10 +31,10 @@ export class ComboComponent implements OnInit {
     //open - close
     OnClick() {
         if (this.open === true){
-        this.open = false;
+            this.open = false;
         }
         else {
-        this.open = true;
+            this.open = true;
         }
     }
 

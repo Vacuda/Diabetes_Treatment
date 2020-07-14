@@ -1,12 +1,12 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { SharedBinService } from '../shared-bin.service';
+import { SharedBinService } from '../../shared-bin.service';
 
 @Component({
-  selector: 'app-lifestyle',
-  templateUrl: './lifestyle.component.html',
-  styleUrls: ['./lifestyle.component.css']
+    selector: 'app-metformin',
+    templateUrl: './metformin.component.html',
+    styleUrls: ["../../patient/patient.component.css", './metformin.component.css']
 })
-export class LifestyleComponent implements OnInit {
+export class MetforminComponent implements OnInit {
 
     @Input()active: boolean;
     open: boolean = false;

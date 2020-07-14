@@ -1,12 +1,12 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { SharedBinService } from '../shared-bin.service';
+import { SharedBinService } from '../../shared-bin.service';
 
 @Component({
-    selector: 'app-triple',
-    templateUrl: './triple.component.html',
-    styleUrls: ['./triple.component.css']
+    selector: 'app-combo',
+    templateUrl: './combo.component.html',
+    styleUrls: ['./combo.component.css']
 })
-export class TripleComponent implements OnInit {
+export class ComboComponent implements OnInit {
 
     @Input() diagnosis:any;
     
@@ -20,7 +20,7 @@ export class TripleComponent implements OnInit {
     }
 
     ngOnChanges() {
-        if(this.diagnosis.active_therapy == "triple"){
+        if(this.diagnosis.active_therapy == "combo"){
             this.active = true;
         }
         else{

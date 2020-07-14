@@ -36,19 +36,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/combo/combo.component.html":
-/*!**********************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/combo/combo.component.html ***!
-  \**********************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div [ngClass]=\"{'active':this.sharedBin.active === 'combo'}\" \n    class=\"therapy_container\">\n\n    <header (click)=\"OnClick()\">\n        <span>Combination Injection Therapy</span>\n        <span class=\"hamburger\">&#9776;</span>\n    </header>\n\n    <div *ngIf=\"open === true\" class=\"cardback\">\n\n        <h6>More Info To Come</h6>\n        \n    </div>\n</div>");
-
-/***/ }),
-
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/doctors-office/doctors-office.component.html":
 /*!****************************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/doctors-office/doctors-office.component.html ***!
@@ -62,36 +49,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/dual/dual.component.html":
-/*!********************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/dual/dual.component.html ***!
-  \********************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div [ngClass]=\"{'active':active === true}\" \n    class=\"therapy_container\">\n\n    <header (click)=\"OnClick()\">\n        <span>Dual Therapy</span>\n        <span class=\"hamburger\">&#9776;</span>\n    </header>\n\n    <div *ngIf=\"open === true\" class=\"cardback\">\n        \n        <app-lifestyle></app-lifestyle>\n        <app-metformin></app-metformin>\n        <h6>Additional Agent</h6>\n        <div class=\"division\">~~~~</div>\n\n    </div>\n</div>");
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/first-line/first-line.component.html":
-/*!********************************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/first-line/first-line.component.html ***!
-  \********************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div [ngClass]=\"{'active':active === true}\" \n    class=\"therapy_container\">\n    <header (click)=\"OnClick()\">\n        <span>First Line Therapy</span>\n        <span class=\"hamburger\">&#9776;</span>\n    </header>\n\n    <div *ngIf=\"open === true\" class=\"cardback\">\n\n        <app-lifestyle [active] = \"active\"></app-lifestyle>\n        <app-metformin [active] = \"active\"></app-metformin> \n        <div class=\"division\">~~~~</div>\n        \n    </div>\n</div>");
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/lifestyle/lifestyle.component.html":
-/*!******************************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/lifestyle/lifestyle.component.html ***!
-  \******************************************************************************************/
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/entries/lifestyle/lifestyle.component.html":
+/*!**************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/entries/lifestyle/lifestyle.component.html ***!
+  \**************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -101,10 +62,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/metformin/metformin.component.html":
-/*!******************************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/metformin/metformin.component.html ***!
-  \******************************************************************************************/
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/entries/metformin/metformin.component.html":
+/*!**************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/entries/metformin/metformin.component.html ***!
+  \**************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -127,10 +88,49 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/triple/triple.component.html":
-/*!************************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/triple/triple.component.html ***!
-  \************************************************************************************/
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/therapies/combo/combo.component.html":
+/*!********************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/therapies/combo/combo.component.html ***!
+  \********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div [ngClass]=\"{'active':this.sharedBin.active === 'combo'}\" \n    class=\"therapy_container\">\n\n    <header (click)=\"OnClick()\">\n        <span>Combination Injection Therapy</span>\n        <span class=\"hamburger\">&#9776;</span>\n    </header>\n\n    <div *ngIf=\"open === true\" class=\"cardback\">\n\n        <h6>More Info To Come</h6>\n        \n    </div>\n</div>");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/therapies/dual/dual.component.html":
+/*!******************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/therapies/dual/dual.component.html ***!
+  \******************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div [ngClass]=\"{'active':active === true}\" \n    class=\"therapy_container\">\n\n    <header (click)=\"OnClick()\">\n        <span>Dual Therapy</span>\n        <span class=\"hamburger\">&#9776;</span>\n    </header>\n\n    <div *ngIf=\"open === true\" class=\"cardback\">\n        \n        <app-lifestyle></app-lifestyle>\n        <app-metformin></app-metformin>\n        <h6>Additional Agent</h6>\n        <div class=\"division\">~~~~</div>\n\n    </div>\n</div>");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/therapies/first-line/first-line.component.html":
+/*!******************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/therapies/first-line/first-line.component.html ***!
+  \******************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div [ngClass]=\"{'active':active === true}\" \n    class=\"therapy_container\">\n    <header (click)=\"OnClick()\">\n        <span>First Line Therapy</span>\n        <span class=\"hamburger\">&#9776;</span>\n    </header>\n\n    <div *ngIf=\"open === true\" class=\"cardback\">\n\n        <app-lifestyle [active] = \"active\"></app-lifestyle>\n        <app-metformin [active] = \"active\"></app-metformin> \n        <div class=\"division\">~~~~</div>\n        \n    </div>\n</div>");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/therapies/triple/triple.component.html":
+/*!**********************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/therapies/triple/triple.component.html ***!
+  \**********************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -513,12 +513,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
-/* harmony import */ var _first_line_first_line_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./first-line/first-line.component */ "./src/app/first-line/first-line.component.ts");
-/* harmony import */ var _dual_dual_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./dual/dual.component */ "./src/app/dual/dual.component.ts");
-/* harmony import */ var _triple_triple_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./triple/triple.component */ "./src/app/triple/triple.component.ts");
-/* harmony import */ var _combo_combo_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./combo/combo.component */ "./src/app/combo/combo.component.ts");
-/* harmony import */ var _metformin_metformin_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./metformin/metformin.component */ "./src/app/metformin/metformin.component.ts");
-/* harmony import */ var _lifestyle_lifestyle_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./lifestyle/lifestyle.component */ "./src/app/lifestyle/lifestyle.component.ts");
+/* harmony import */ var _therapies_first_line_first_line_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./therapies/first-line/first-line.component */ "./src/app/therapies/first-line/first-line.component.ts");
+/* harmony import */ var _therapies_dual_dual_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./therapies/dual/dual.component */ "./src/app/therapies/dual/dual.component.ts");
+/* harmony import */ var _therapies_triple_triple_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./therapies/triple/triple.component */ "./src/app/therapies/triple/triple.component.ts");
+/* harmony import */ var _therapies_combo_combo_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./therapies/combo/combo.component */ "./src/app/therapies/combo/combo.component.ts");
+/* harmony import */ var _entries_metformin_metformin_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./entries/metformin/metformin.component */ "./src/app/entries/metformin/metformin.component.ts");
+/* harmony import */ var _entries_lifestyle_lifestyle_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./entries/lifestyle/lifestyle.component */ "./src/app/entries/lifestyle/lifestyle.component.ts");
 /* harmony import */ var _patient_patient_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./patient/patient.component */ "./src/app/patient/patient.component.ts");
 /* harmony import */ var _shared_bin_service__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./shared-bin.service */ "./src/app/shared-bin.service.ts");
 /* harmony import */ var _doctors_office_doctors_office_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./doctors-office/doctors-office.component */ "./src/app/doctors-office/doctors-office.component.ts");
@@ -544,12 +544,12 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
         declarations: [
             _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
-            _first_line_first_line_component__WEBPACK_IMPORTED_MODULE_7__["FirstLineComponent"],
-            _dual_dual_component__WEBPACK_IMPORTED_MODULE_8__["DualComponent"],
-            _triple_triple_component__WEBPACK_IMPORTED_MODULE_9__["TripleComponent"],
-            _combo_combo_component__WEBPACK_IMPORTED_MODULE_10__["ComboComponent"],
-            _metformin_metformin_component__WEBPACK_IMPORTED_MODULE_11__["MetforminComponent"],
-            _lifestyle_lifestyle_component__WEBPACK_IMPORTED_MODULE_12__["LifestyleComponent"],
+            _therapies_first_line_first_line_component__WEBPACK_IMPORTED_MODULE_7__["FirstLineComponent"],
+            _therapies_dual_dual_component__WEBPACK_IMPORTED_MODULE_8__["DualComponent"],
+            _therapies_triple_triple_component__WEBPACK_IMPORTED_MODULE_9__["TripleComponent"],
+            _therapies_combo_combo_component__WEBPACK_IMPORTED_MODULE_10__["ComboComponent"],
+            _entries_metformin_metformin_component__WEBPACK_IMPORTED_MODULE_11__["MetforminComponent"],
+            _entries_lifestyle_lifestyle_component__WEBPACK_IMPORTED_MODULE_12__["LifestyleComponent"],
             _patient_patient_component__WEBPACK_IMPORTED_MODULE_13__["PatientComponent"],
             _doctors_office_doctors_office_component__WEBPACK_IMPORTED_MODULE_15__["DoctorsOfficeComponent"],
         ],
@@ -563,79 +563,6 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
     })
 ], AppModule);
-
-
-
-/***/ }),
-
-/***/ "./src/app/combo/combo.component.css":
-/*!*******************************************!*\
-  !*** ./src/app/combo/combo.component.css ***!
-  \*******************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbWJvL2NvbWJvLmNvbXBvbmVudC5jc3MifQ== */");
-
-/***/ }),
-
-/***/ "./src/app/combo/combo.component.ts":
-/*!******************************************!*\
-  !*** ./src/app/combo/combo.component.ts ***!
-  \******************************************/
-/*! exports provided: ComboComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ComboComponent", function() { return ComboComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _shared_bin_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../shared-bin.service */ "./src/app/shared-bin.service.ts");
-
-
-
-let ComboComponent = class ComboComponent {
-    constructor(sharedBin) {
-        this.sharedBin = sharedBin;
-        this.active = false;
-        this.open = false;
-    }
-    ngOnInit() {
-    }
-    ngOnChanges() {
-        if (this.diagnosis.active_therapy == "combo") {
-            this.active = true;
-        }
-        else {
-            this.active = false;
-        }
-    }
-    //open - close
-    OnClick() {
-        if (this.open === true) {
-            this.open = false;
-        }
-        else {
-            this.open = true;
-        }
-    }
-};
-ComboComponent.ctorParameters = () => [
-    { type: _shared_bin_service__WEBPACK_IMPORTED_MODULE_2__["SharedBinService"] }
-];
-tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
-], ComboComponent.prototype, "diagnosis", void 0);
-ComboComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-combo',
-        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./combo.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/combo/combo.component.html")).default,
-        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./combo.component.css */ "./src/app/combo/combo.component.css")).default]
-    })
-], ComboComponent);
 
 
 
@@ -782,169 +709,23 @@ DoctorsOfficeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
-/***/ "./src/app/dual/dual.component.css":
-/*!*****************************************!*\
-  !*** ./src/app/dual/dual.component.css ***!
-  \*****************************************/
+/***/ "./src/app/entries/lifestyle/lifestyle.component.css":
+/*!***********************************************************!*\
+  !*** ./src/app/entries/lifestyle/lifestyle.component.css ***!
+  \***********************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2R1YWwvZHVhbC5jb21wb25lbnQuY3NzIn0= */");
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2VudHJpZXMvbGlmZXN0eWxlL2xpZmVzdHlsZS5jb21wb25lbnQuY3NzIn0= */");
 
 /***/ }),
 
-/***/ "./src/app/dual/dual.component.ts":
-/*!****************************************!*\
-  !*** ./src/app/dual/dual.component.ts ***!
-  \****************************************/
-/*! exports provided: DualComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DualComponent", function() { return DualComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _shared_bin_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../shared-bin.service */ "./src/app/shared-bin.service.ts");
-
-
-
-let DualComponent = class DualComponent {
-    constructor(sharedBin) {
-        this.sharedBin = sharedBin;
-        this.active = false;
-        this.open = false;
-    }
-    ngOnInit() {
-    }
-    ngOnChanges() {
-        if (this.diagnosis.active_therapy == "dual") {
-            this.active = true;
-        }
-        else {
-            this.active = false;
-        }
-    }
-    //open - close
-    OnClick() {
-        if (this.open === true) {
-            this.open = false;
-        }
-        else {
-            this.open = true;
-        }
-    }
-};
-DualComponent.ctorParameters = () => [
-    { type: _shared_bin_service__WEBPACK_IMPORTED_MODULE_2__["SharedBinService"] }
-];
-tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
-], DualComponent.prototype, "diagnosis", void 0);
-DualComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-dual',
-        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./dual.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/dual/dual.component.html")).default,
-        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./dual.component.css */ "./src/app/dual/dual.component.css")).default]
-    })
-], DualComponent);
-
-
-
-/***/ }),
-
-/***/ "./src/app/first-line/first-line.component.css":
-/*!*****************************************************!*\
-  !*** ./src/app/first-line/first-line.component.css ***!
-  \*****************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2ZpcnN0LWxpbmUvZmlyc3QtbGluZS5jb21wb25lbnQuY3NzIn0= */");
-
-/***/ }),
-
-/***/ "./src/app/first-line/first-line.component.ts":
-/*!****************************************************!*\
-  !*** ./src/app/first-line/first-line.component.ts ***!
-  \****************************************************/
-/*! exports provided: FirstLineComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FirstLineComponent", function() { return FirstLineComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _shared_bin_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../shared-bin.service */ "./src/app/shared-bin.service.ts");
-
-
-
-let FirstLineComponent = class FirstLineComponent {
-    constructor(sharedBin) {
-        this.sharedBin = sharedBin;
-        this.active = false;
-        this.open = false;
-    }
-    ngOnInit() {
-    }
-    ngOnChanges() {
-        if (this.diagnosis.active_therapy == "first-line") {
-            this.active = true;
-        }
-        else {
-            this.active = false;
-        }
-    }
-    //open - close
-    OnClick() {
-        if (this.open === true) {
-            this.open = false;
-        }
-        else {
-            this.open = true;
-        }
-    }
-};
-FirstLineComponent.ctorParameters = () => [
-    { type: _shared_bin_service__WEBPACK_IMPORTED_MODULE_2__["SharedBinService"] }
-];
-tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
-], FirstLineComponent.prototype, "diagnosis", void 0);
-FirstLineComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-first-line',
-        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./first-line.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/first-line/first-line.component.html")).default,
-        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./first-line.component.css */ "./src/app/first-line/first-line.component.css")).default]
-    })
-], FirstLineComponent);
-
-
-
-/***/ }),
-
-/***/ "./src/app/lifestyle/lifestyle.component.css":
-/*!***************************************************!*\
-  !*** ./src/app/lifestyle/lifestyle.component.css ***!
-  \***************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2xpZmVzdHlsZS9saWZlc3R5bGUuY29tcG9uZW50LmNzcyJ9 */");
-
-/***/ }),
-
-/***/ "./src/app/lifestyle/lifestyle.component.ts":
-/*!**************************************************!*\
-  !*** ./src/app/lifestyle/lifestyle.component.ts ***!
-  \**************************************************/
+/***/ "./src/app/entries/lifestyle/lifestyle.component.ts":
+/*!**********************************************************!*\
+  !*** ./src/app/entries/lifestyle/lifestyle.component.ts ***!
+  \**********************************************************/
 /*! exports provided: LifestyleComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -953,7 +734,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LifestyleComponent", function() { return LifestyleComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _shared_bin_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../shared-bin.service */ "./src/app/shared-bin.service.ts");
+/* harmony import */ var _shared_bin_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared-bin.service */ "./src/app/shared-bin.service.ts");
 
 
 
@@ -985,8 +766,8 @@ tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 LifestyleComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-lifestyle',
-        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./lifestyle.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/lifestyle/lifestyle.component.html")).default,
-        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./lifestyle.component.css */ "./src/app/lifestyle/lifestyle.component.css")).default]
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./lifestyle.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/entries/lifestyle/lifestyle.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./lifestyle.component.css */ "./src/app/entries/lifestyle/lifestyle.component.css")).default]
     })
 ], LifestyleComponent);
 
@@ -994,23 +775,23 @@ LifestyleComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
-/***/ "./src/app/metformin/metformin.component.css":
-/*!***************************************************!*\
-  !*** ./src/app/metformin/metformin.component.css ***!
-  \***************************************************/
+/***/ "./src/app/entries/metformin/metformin.component.css":
+/*!***********************************************************!*\
+  !*** ./src/app/entries/metformin/metformin.component.css ***!
+  \***********************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("/* -----------this includes patient.component.css for all of the form css-------------*/\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbWV0Zm9ybWluL21ldGZvcm1pbi5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLHVGQUF1RiIsImZpbGUiOiJzcmMvYXBwL21ldGZvcm1pbi9tZXRmb3JtaW4uY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qIC0tLS0tLS0tLS0tdGhpcyBpbmNsdWRlcyBwYXRpZW50LmNvbXBvbmVudC5jc3MgZm9yIGFsbCBvZiB0aGUgZm9ybSBjc3MtLS0tLS0tLS0tLS0tKi9cclxuIl19 */");
+/* harmony default export */ __webpack_exports__["default"] = ("/* -----------this includes patient.component.css for all of the form css-------------*/\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZW50cmllcy9tZXRmb3JtaW4vbWV0Zm9ybWluLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsdUZBQXVGIiwiZmlsZSI6InNyYy9hcHAvZW50cmllcy9tZXRmb3JtaW4vbWV0Zm9ybWluLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvKiAtLS0tLS0tLS0tLXRoaXMgaW5jbHVkZXMgcGF0aWVudC5jb21wb25lbnQuY3NzIGZvciBhbGwgb2YgdGhlIGZvcm0gY3NzLS0tLS0tLS0tLS0tLSovXHJcbiJdfQ== */");
 
 /***/ }),
 
-/***/ "./src/app/metformin/metformin.component.ts":
-/*!**************************************************!*\
-  !*** ./src/app/metformin/metformin.component.ts ***!
-  \**************************************************/
+/***/ "./src/app/entries/metformin/metformin.component.ts":
+/*!**********************************************************!*\
+  !*** ./src/app/entries/metformin/metformin.component.ts ***!
+  \**********************************************************/
 /*! exports provided: MetforminComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1019,7 +800,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MetforminComponent", function() { return MetforminComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _shared_bin_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../shared-bin.service */ "./src/app/shared-bin.service.ts");
+/* harmony import */ var _shared_bin_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared-bin.service */ "./src/app/shared-bin.service.ts");
 
 
 
@@ -1051,8 +832,8 @@ tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 MetforminComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-metformin',
-        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./metformin.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/metformin/metformin.component.html")).default,
-        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ../patient/patient.component.css */ "./src/app/patient/patient.component.css")).default, tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./metformin.component.css */ "./src/app/metformin/metformin.component.css")).default]
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./metformin.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/entries/metformin/metformin.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ../../patient/patient.component.css */ "./src/app/patient/patient.component.css")).default, tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./metformin.component.css */ "./src/app/entries/metformin/metformin.component.css")).default]
     })
 ], MetforminComponent);
 
@@ -1159,23 +940,242 @@ SharedBinService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
-/***/ "./src/app/triple/triple.component.css":
-/*!*********************************************!*\
-  !*** ./src/app/triple/triple.component.css ***!
-  \*********************************************/
+/***/ "./src/app/therapies/combo/combo.component.css":
+/*!*****************************************************!*\
+  !*** ./src/app/therapies/combo/combo.component.css ***!
+  \*****************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3RyaXBsZS90cmlwbGUuY29tcG9uZW50LmNzcyJ9 */");
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3RoZXJhcGllcy9jb21iby9jb21iby5jb21wb25lbnQuY3NzIn0= */");
 
 /***/ }),
 
-/***/ "./src/app/triple/triple.component.ts":
-/*!********************************************!*\
-  !*** ./src/app/triple/triple.component.ts ***!
-  \********************************************/
+/***/ "./src/app/therapies/combo/combo.component.ts":
+/*!****************************************************!*\
+  !*** ./src/app/therapies/combo/combo.component.ts ***!
+  \****************************************************/
+/*! exports provided: ComboComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ComboComponent", function() { return ComboComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _shared_bin_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared-bin.service */ "./src/app/shared-bin.service.ts");
+
+
+
+let ComboComponent = class ComboComponent {
+    constructor(sharedBin) {
+        this.sharedBin = sharedBin;
+        this.active = false;
+        this.open = false;
+    }
+    ngOnInit() {
+    }
+    ngOnChanges() {
+        if (this.diagnosis.active_therapy == "combo") {
+            this.active = true;
+        }
+        else {
+            this.active = false;
+        }
+    }
+    //open - close
+    OnClick() {
+        if (this.open === true) {
+            this.open = false;
+        }
+        else {
+            this.open = true;
+        }
+    }
+};
+ComboComponent.ctorParameters = () => [
+    { type: _shared_bin_service__WEBPACK_IMPORTED_MODULE_2__["SharedBinService"] }
+];
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], ComboComponent.prototype, "diagnosis", void 0);
+ComboComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-combo',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./combo.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/therapies/combo/combo.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./combo.component.css */ "./src/app/therapies/combo/combo.component.css")).default]
+    })
+], ComboComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/therapies/dual/dual.component.css":
+/*!***************************************************!*\
+  !*** ./src/app/therapies/dual/dual.component.css ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3RoZXJhcGllcy9kdWFsL2R1YWwuY29tcG9uZW50LmNzcyJ9 */");
+
+/***/ }),
+
+/***/ "./src/app/therapies/dual/dual.component.ts":
+/*!**************************************************!*\
+  !*** ./src/app/therapies/dual/dual.component.ts ***!
+  \**************************************************/
+/*! exports provided: DualComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DualComponent", function() { return DualComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _shared_bin_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared-bin.service */ "./src/app/shared-bin.service.ts");
+
+
+
+let DualComponent = class DualComponent {
+    constructor(sharedBin) {
+        this.sharedBin = sharedBin;
+        this.active = false;
+        this.open = false;
+    }
+    ngOnInit() {
+    }
+    ngOnChanges() {
+        if (this.diagnosis.active_therapy == "dual") {
+            this.active = true;
+        }
+        else {
+            this.active = false;
+        }
+    }
+    //open - close
+    OnClick() {
+        if (this.open === true) {
+            this.open = false;
+        }
+        else {
+            this.open = true;
+        }
+    }
+};
+DualComponent.ctorParameters = () => [
+    { type: _shared_bin_service__WEBPACK_IMPORTED_MODULE_2__["SharedBinService"] }
+];
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], DualComponent.prototype, "diagnosis", void 0);
+DualComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-dual',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./dual.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/therapies/dual/dual.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./dual.component.css */ "./src/app/therapies/dual/dual.component.css")).default]
+    })
+], DualComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/therapies/first-line/first-line.component.css":
+/*!***************************************************************!*\
+  !*** ./src/app/therapies/first-line/first-line.component.css ***!
+  \***************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3RoZXJhcGllcy9maXJzdC1saW5lL2ZpcnN0LWxpbmUuY29tcG9uZW50LmNzcyJ9 */");
+
+/***/ }),
+
+/***/ "./src/app/therapies/first-line/first-line.component.ts":
+/*!**************************************************************!*\
+  !*** ./src/app/therapies/first-line/first-line.component.ts ***!
+  \**************************************************************/
+/*! exports provided: FirstLineComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FirstLineComponent", function() { return FirstLineComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _shared_bin_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared-bin.service */ "./src/app/shared-bin.service.ts");
+
+
+
+let FirstLineComponent = class FirstLineComponent {
+    constructor(sharedBin) {
+        this.sharedBin = sharedBin;
+        this.active = false;
+        this.open = false;
+    }
+    ngOnInit() {
+    }
+    ngOnChanges() {
+        if (this.diagnosis.active_therapy == "first-line") {
+            this.active = true;
+        }
+        else {
+            this.active = false;
+        }
+    }
+    //open - close
+    OnClick() {
+        if (this.open === true) {
+            this.open = false;
+        }
+        else {
+            this.open = true;
+        }
+    }
+};
+FirstLineComponent.ctorParameters = () => [
+    { type: _shared_bin_service__WEBPACK_IMPORTED_MODULE_2__["SharedBinService"] }
+];
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], FirstLineComponent.prototype, "diagnosis", void 0);
+FirstLineComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-first-line',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./first-line.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/therapies/first-line/first-line.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./first-line.component.css */ "./src/app/therapies/first-line/first-line.component.css")).default]
+    })
+], FirstLineComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/therapies/triple/triple.component.css":
+/*!*******************************************************!*\
+  !*** ./src/app/therapies/triple/triple.component.css ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3RoZXJhcGllcy90cmlwbGUvdHJpcGxlLmNvbXBvbmVudC5jc3MifQ== */");
+
+/***/ }),
+
+/***/ "./src/app/therapies/triple/triple.component.ts":
+/*!******************************************************!*\
+  !*** ./src/app/therapies/triple/triple.component.ts ***!
+  \******************************************************/
 /*! exports provided: TripleComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1184,7 +1184,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TripleComponent", function() { return TripleComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _shared_bin_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../shared-bin.service */ "./src/app/shared-bin.service.ts");
+/* harmony import */ var _shared_bin_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared-bin.service */ "./src/app/shared-bin.service.ts");
 
 
 
@@ -1223,8 +1223,8 @@ tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 TripleComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-triple',
-        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./triple.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/triple/triple.component.html")).default,
-        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./triple.component.css */ "./src/app/triple/triple.component.css")).default]
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./triple.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/therapies/triple/triple.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./triple.component.css */ "./src/app/therapies/triple/triple.component.css")).default]
     })
 ], TripleComponent);
 

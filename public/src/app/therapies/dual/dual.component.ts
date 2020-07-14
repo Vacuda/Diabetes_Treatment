@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { SharedBinService } from '../shared-bin.service';
+import { SharedBinService } from '../../shared-bin.service';
 
 @Component({
     selector: 'app-dual',
