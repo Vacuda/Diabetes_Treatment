@@ -24,6 +24,7 @@ export class DoctorsOfficeComponent implements OnInit {
     @Input() a1c:number;
     @Input() weight_lb:number;
     @Input() weight_kg:number;
+    @Input() age:number;
     @Input() insulin_current:number;
 
     @Input() cholesterol:number;
@@ -35,6 +36,8 @@ export class DoctorsOfficeComponent implements OnInit {
     @Input() blood_pressure_syst:number;
     @Input() blood_pressure_dias:number;
     @Input() eGFR:number;
+
+    @Input() metformin_dosage:number;
 
     diagnosis:any = {
         active_therapy: ""
@@ -52,30 +55,42 @@ export class DoctorsOfficeComponent implements OnInit {
     }
 
     main_Diagnosis_Logic(){
+
+        this.reset_diagnosis();
         
-        console.log("shared" + this.sharedBin.weight_kg);
-        console.log("direct" + this.weight_kg);
+        // console.log("shared" + this.sharedBin.weight_kg);
+        // console.log("direct" + this.weight_kg);
 
-        if(this.newly_diagnosed == true && this.a1c){
 
-            this.diagnosis = {active_therapy:"first-line"};
+        if(this.sharedBin.eGFR < 60){
+            this.diagnosis.is_metformin_safe = false;
         }
+        else{
+            this.diagnosis.is_metformin_safe = true;
+        }
+
+        // if(this.newly_diagnosed == true && this.a1c){
+
+        //     this.diagnosis = {active_therapy:"first-line"};
+        // }
 
 
 
 
         if(this.a1c > 7 && this.a1c < 9){
-            this.diagnosis = {active_therapy:"first-line"};
+            this.diagnosis.active_therapy = "first-line";
         }
         else if(this.a1c >= 9 && this.a1c < 10){
-            this.diagnosis = {active_therapy:"dual"};
+            this.diagnosis.active_therapy = "dual";
         }
         else if(this.a1c >= 10){
-            this.diagnosis = {active_therapy:"triple"};
+            this.diagnosis.active_therapy = "triple";
         }
         else{
-            this.diagnosis = {active_therapy:"none"};
+            this.diagnosis.active_therapy = "none";
         }
+
+        console.log(this.diagnosis)
     }
 
     //2.2046226218 lb in 1 kilogram
@@ -95,6 +110,13 @@ export class DoctorsOfficeComponent implements OnInit {
             if(this.sharedBin.weight_kg != converted_to_kg){
                 this.sharedBin.weight_kg = converted_to_kg;
             }
+        }
+    }
+
+    reset_diagnosis(){
+        this.diagnosis = {
+            active_therapy:"",
+            is_metformin_safe: ""
         }
     }
 

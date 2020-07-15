@@ -9,15 +9,28 @@ import { SharedBinService } from '../../shared-bin.service';
 export class MetforminComponent implements OnInit {
 
     @Input()active: boolean;
+    @Input()diagnosis: any;
     open: boolean = false;
+    shutdown: boolean = false;
 
     constructor( private sharedBin: SharedBinService ) { }
 
     ngOnInit() {
-
+        // console.log("meta")
+        // console.log(this.diagnosis)
     }
 
     ngOnChanges() {
+        console.log(this.diagnosis)
+        console.log(this.shutdown)
+        if(this.diagnosis.is_metformin_safe == false){
+            this.shutdown = true;
+        }
+        else{
+            this.shutdown = false;
+        }
+        console.log(this.shutdown)
+
     }
 
     //open - close

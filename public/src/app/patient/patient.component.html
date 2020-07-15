@@ -18,6 +18,7 @@
             <span *ngIf="this.sharedBin.have_symptoms === false">No</span>
         </h6>
         <h6>Weight: {{this.sharedBin.weight_kg}} kg, {{this.sharedBin.weight_lb}} lb</h6>
+        <h6>Age: {{this.sharedBin.age}} years</h6>
         <h6>Current Insulin: {{this.sharedBin.insulin_current}}</h6>
         <h6>Cholesterol: {{this.sharedBin.cholesterol}}</h6>
         <h6>Past Heart Attack: 
@@ -121,6 +122,25 @@
                 <div class="slider_container">
                     <input [(ngModel)]="this.sharedBin.weight_lb" 
                     type="range" min="5" max="400" value="50" class="slider" step="1">
+                </div>
+            </div>
+        </div>
+
+        <!--Age-->
+        <div class="patient_row">
+            <div class="patient_col_a">
+                <p>Age:</p>
+            </div>
+            <div class="patient_col_b">
+                <input [(ngModel)]="this.sharedBin.age" class="form-control" placeholder="---">
+            </div>
+            <div class="patient_col_c">
+                <p>years</p>
+            </div>
+            <div class="patient_col_d">
+                <div class="slider_container">
+                    <input [(ngModel)]="this.sharedBin.age" 
+                    type="range" min="0" max="125" value="50" class="slider" step="1">
                 </div>
             </div>
         </div>
@@ -298,7 +318,7 @@
             <div class="patient_col_d">
                 <div class="slider_container">
                     <input [(ngModel)]="this.sharedBin.eGFR" 
-                    type="range" min="5" max="12" value="50" class="slider" step="0.1">
+                    type="range" min="0" max="100" value="50" class="slider" step="1">
                 </div>
             </div>
         </div>

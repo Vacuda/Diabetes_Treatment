@@ -2,91 +2,98 @@
     class="info_container">
     
     <h6 (click)="OnClick()">
-        <span>Metaformin</span>
+        <span><s *ngIf="shutdown == true">Metaformin</s></span>
+        <span *ngIf="shutdown == false">Metaformin</span>
         <span class="hamburger">&#9776;</span>
     </h6>
 
     <div *ngIf="open === true" class="infoback">
-        
-        <!--Dosage-->
-        <div class="patient_row">
-            <div class="patient_col_a">
-                <p>Metaformin Dosage:</p>
-            </div>
-            <div class="patient_col_b">
-                <input [(ngModel)]="this.sharedBin.metaformin_dosage" class="form-control" placeholder="---">
-            </div>
-            <div class="patient_col_c">
-                <p>mg</p>
-            </div>
-            <div class="patient_col_d">
-                <div class="slider_container">
-                    <input [(ngModel)]="this.sharedBin.metaformin_dosage" 
-                    type="range" min="5" max="12" value="50" class="slider" step="0.1">
-                </div>
-            </div>
+
+        <div *ngIf="shutdown === true">
+            <span>Because eGFR below 60, Metformin is not safe</span>
+
         </div>
 
-
-        <table>
-            <tr>
-                <th>Efficacy</th>
-                <td>High</td>
-            </tr>
-            <tr>
-                <th>Hypoglycemia</th>
-                <td>No</td>
-            </tr>
-            <tr>
-                <th>Weight Change</th>
-                <td>Neutral or Modest Loss</td>
-            </tr>
-            <tr>
-                <th>Cost</th>
-                <td>Low</td>
-            </tr>
-            <tr>
-                <th>Oral/SQ</th>
-                <td>Oral</td>
-            </tr>
-        </table>
-
-        <table>
-            <tr>
-                <th>CV Effects</th>
-                <td>
-                    <table>
-                        <tr>
-                            <th>ASCVD</th>
-                            <td>Potential Benefit</td>
-                        </tr>
-                        <tr>
-                            <th>CHF</th>
-                            <td>Neutral</td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-            <tr>
-                <th>Renal Effects</th>
-                <td>
-                    <table>
-                        <tr>
-                            <th>Progression of DKD</th>
-                            <td>Neutral</td>
-                        </tr>
-                        <tr>
-                            <th>Dosing</th>
-                            <td>Contraindicated with eGRF &lt30</td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-            <tr></tr>
-        </table>
+        <div *ngIf="shutdown === false">
+            <!--Dosage-->
+            <div class="patient_row">
+                <div class="patient_col_a">
+                    <p>Metformin Dosage:</p>
+                </div>
+                <div class="patient_col_b">
+                    <input [(ngModel)]="this.sharedBin.metformin_dosage" class="form-control" placeholder="---">
+                </div>
+                <div class="patient_col_c">
+                    <p>mg</p>
+                </div>
+                <div class="patient_col_d">
+                    <div class="slider_container">
+                        <input [(ngModel)]="this.sharedBin.metformin_dosage" 
+                        type="range" min="5" max="12" value="50" class="slider" step="0.1">
+                    </div>
+                </div>
+            </div>
 
 
-        <div class="division">~~~~</div>
+            <table>
+                <tr>
+                    <th>Efficacy</th>
+                    <td>High</td>
+                </tr>
+                <tr>
+                    <th>Hypoglycemia</th>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <th>Weight Change</th>
+                    <td>Neutral or Modest Loss</td>
+                </tr>
+                <tr>
+                    <th>Cost</th>
+                    <td>Low</td>
+                </tr>
+                <tr>
+                    <th>Oral/SQ</th>
+                    <td>Oral</td>
+                </tr>
+            </table>
 
+            <table>
+                <tr>
+                    <th>CV Effects</th>
+                    <td>
+                        <table>
+                            <tr>
+                                <th>ASCVD</th>
+                                <td>Potential Benefit</td>
+                            </tr>
+                            <tr>
+                                <th>CHF</th>
+                                <td>Neutral</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Renal Effects</th>
+                    <td>
+                        <table>
+                            <tr>
+                                <th>Progression of DKD</th>
+                                <td>Neutral</td>
+                            </tr>
+                            <tr>
+                                <th>Dosing</th>
+                                <td>Contraindicated with eGRF &lt30</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr></tr>
+            </table>
+
+        </div>
+        
+    
     </div>
 </div>

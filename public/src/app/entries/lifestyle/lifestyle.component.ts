@@ -9,6 +9,7 @@ import { SharedBinService } from '../../shared-bin.service';
 export class LifestyleComponent implements OnInit {
 
     @Input()active: boolean;
+    @Input()diagnosis: any;
     open: boolean = false;
 
     constructor( private sharedBin: SharedBinService ) { }

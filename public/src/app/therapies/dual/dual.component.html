@@ -8,8 +8,8 @@
 
     <div *ngIf="open === true" class="cardback">
         
-        <app-lifestyle></app-lifestyle>
-        <app-metformin></app-metformin>
+        <app-lifestyle [active] = "active" [diagnosis] = "diagnosis"></app-lifestyle>
+        <app-metformin [active] = "active" [diagnosis] = "diagnosis"></app-metformin> 
         <h6>Additional Agent</h6>
         <div class="division">~~~~</div>
 
